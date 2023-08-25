@@ -1,6 +1,8 @@
 function Coworker() {
   return (
-    <div>Coworker</div>
+    <div>
+      <h1>Coworker</h1>
+    </div>
   )
 }
 
