@@ -7,7 +7,7 @@ function CoworkerSection() {
     <div>
       <div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h2>VÅRAT TEAM</h2>
+          <h2>VÅRT TEAM</h2>
         </div>
         <ul>
           {coworkers.map((coworker) => (
