@@ -9,8 +9,6 @@ function Header() {
       <br />
       <NavLink to="/">Home page</NavLink>
       <br />
-      <NavLink to="/coworker">Coworker page</NavLink>
-      <br />
       <NavLink to="/login">Login page</NavLink>
     </header>
   );
