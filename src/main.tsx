@@ -1,3 +1,4 @@
+import { MantineProvider } from "@mantine/core";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -25,11 +26,17 @@ const router = createBrowserRouter(
 export function Root() {
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <MantineProvider
+        theme={{
+          fontFamily: "Inter, sans-serif",
+        }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
+        <RouterProvider router={router} />
+      </MantineProvider>
     </React.StrictMode>
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <Root />
-);
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<Root />);
