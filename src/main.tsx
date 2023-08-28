@@ -16,7 +16,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="/coworker" element={<Coworker />} />
+      <Route path="/coworker/:id" element={<Coworker />} />
       <Route path="/login" element={<Login />} />
     </Route>
   )
@@ -30,4 +30,6 @@ export function Root() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<Root />);
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <Root />
+);
