@@ -1,15 +1,16 @@
+import { Box } from "@mantine/core";
+
 function CollaborationSection() {
-    
-    // CSS ------------------------------------------------------------------------
+  // CSS ------------------------------------------------------------------------
 
+  // Variabler / Functions ------------------------------------------------------
 
-    // Variabler / Functions ------------------------------------------------------
-  
-  
-    // TSX ------------------------------------------------------------------------
+  // TSX ------------------------------------------------------------------------
   return (
-    <div style={{backgroundColor: "green"}}>Collaboration Section</div>
-  )
+    <>
+      <Box bg="pink.9">Collaboration Section</Box>
+    </>
+  );
 }
 
-export default CollaborationSection
+export default CollaborationSection;

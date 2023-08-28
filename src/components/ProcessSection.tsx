@@ -1,16 +1,16 @@
+import { Box } from "@mantine/core";
 
 function ProcessSection() {
-    
-    // CSS ------------------------------------------------------------------------
+  // CSS ------------------------------------------------------------------------
 
+  // Variabler / Functions ------------------------------------------------------
 
-    // Variabler / Functions ------------------------------------------------------
-  
-  
-    // TSX ------------------------------------------------------------------------
+  // TSX ------------------------------------------------------------------------
   return (
-    <div style={{backgroundColor: "lightgray"}}>Process Section</div>
-  )
+    <>
+      <Box bg="gray.5">Process Section</Box>
+    </>
+  );
 }
 
-export default ProcessSection
+export default ProcessSection;

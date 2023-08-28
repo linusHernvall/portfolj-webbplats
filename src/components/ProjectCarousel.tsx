@@ -1,8 +1,11 @@
+import { Box } from "@mantine/core";
 
 function ProjectCarousel() {
   return (
-    <div style={{backgroundColor: "purple"}}>ProjectCarousel</div>
-  )
+    <>
+      <Box bg="orange.9">Project Carusel</Box>
+    </>
+  );
 }
 
-export default ProjectCarousel
+export default ProjectCarousel;

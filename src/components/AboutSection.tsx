@@ -1,16 +1,16 @@
+import { Box } from "@mantine/core";
 
 function AboutSection() {
-    
-    // CSS ------------------------------------------------------------------------
+  // CSS ------------------------------------------------------------------------
 
+  // Variabler / Functions ------------------------------------------------------
 
-    // Variabler / Functions ------------------------------------------------------
-  
-  
-    // TSX ------------------------------------------------------------------------
+  // TSX ------------------------------------------------------------------------
   return (
-    <div style={{backgroundColor: "pink"}}>About Section</div>
-  )
+    <>
+      <Box bg="red.9">About Section</Box>
+    </>
+  );
 }
 
-export default AboutSection
+export default AboutSection;

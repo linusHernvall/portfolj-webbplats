@@ -9,7 +9,7 @@ function ContactSection() {
   
     // TSX ------------------------------------------------------------------------
   return (
-    <Box>Contact Section</Box>
+    <Box bg="green.9">Map Section</Box>
   )
 }
 
