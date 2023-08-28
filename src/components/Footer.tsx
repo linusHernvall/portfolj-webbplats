@@ -1,9 +1,17 @@
 
 function Footer() {
+  
+    // CSS ------------------------------------------------------------------------
+
+
+    // Variabler / Functions ------------------------------------------------------
+  
+  
+    // TSX ------------------------------------------------------------------------
   return (
     <footer style={{backgroundColor: "brown"}}> 
         <h2>Footer</h2>
-        <img src="./logo.png" alt="Eld´s Logo" />
+        <img src="/public/logo.png" alt="Eld´s Logo" />
     </footer>
   )
 }

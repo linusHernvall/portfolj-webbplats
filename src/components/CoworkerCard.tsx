@@ -5,10 +5,15 @@ function CoworkerCard(props: {
   phone: string;
   email: string;
 }) {
+  // CSS ------------------------------------------------------------------------
+
+  // Variabler / Functions ------------------------------------------------------
   const { name, expertise, bio, phone, email } = props;
+
+  // TSX ------------------------------------------------------------------------
   return (
     <div>
-      <div style={{ border: "2px solid red", width: "300px" }}>
+      <div style={{ border: "2px solid red" }}>
         <h3>{name}</h3>
         <h5>{expertise}</h5>
         <p>{phone}</p>

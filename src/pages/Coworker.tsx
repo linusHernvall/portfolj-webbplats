@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { coworkers } from "../data";
 
 function Coworker() {
+  // CSS ------------------------------------------------------------------------
+
+  // Variabler / Functions ------------------------------------------------------
   const { id } = useParams<{ id: string | undefined }>();
 
   if (!id) {
@@ -14,6 +17,7 @@ function Coworker() {
     return <h4>Coworker not found</h4>;
   }
 
+  // TSX ------------------------------------------------------------------------
   return (
     <div>
       <h2>{coworker.fullName}</h2>
