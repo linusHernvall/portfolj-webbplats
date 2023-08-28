@@ -1,19 +1,16 @@
+import { Box } from '@mantine/core';
 
-function Footer() {
-  
+function ContactSection() {
+    
     // CSS ------------------------------------------------------------------------
-
 
     // Variabler / Functions ------------------------------------------------------
   
   
     // TSX ------------------------------------------------------------------------
   return (
-    <footer style={{backgroundColor: "brown"}}> 
-        <h2>Footer</h2>
-        <img src="/public/logo.png" alt="Eld´s Logo" />
-    </footer>
+    <Box bg="green.9">Map Section</Box>
   )
 }
 
-export default Footer
+export default ContactSection

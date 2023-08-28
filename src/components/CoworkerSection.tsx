@@ -3,6 +3,14 @@ import { coworkers } from "../data";
 import CoworkerCard from "./CoworkerCard";
 
 function CoworkerSection() {
+  
+    // CSS ------------------------------------------------------------------------
+
+
+    // Variabler / Functions ------------------------------------------------------
+  
+  
+    // TSX ------------------------------------------------------------------------
   return (
     <div>
       <div>
@@ -14,7 +22,7 @@ function CoworkerSection() {
             <li key={coworker.id}>
               <NavLink
                 to={`/coworker/${coworker.id}`}
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", color: "black" }}
               >
                 <CoworkerCard
                   name={coworker.fullName}
