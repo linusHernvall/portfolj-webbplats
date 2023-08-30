@@ -30,22 +30,32 @@ function BurgerMenuLinks() {
               {' '}
               Process
             </Title>
+          </li>
+          <li>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Projekt
             </Title>
+          </li>
+          <li>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Teamet
             </Title>
+          </li>
+          <li>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Kontakta
             </Title>
+          </li>
+          <li>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Om oss
             </Title>
+          </li>
+          <li>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Hitta hit
