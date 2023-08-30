@@ -23,7 +23,9 @@ function Home() {
       <ProjectCarousel />
       <CoworkerSection />
       <ContactSection />
-      <AboutSection />
+      <div id='about'>
+        <AboutSection />
+      </div>
       <MapSection />
     </div>
   );

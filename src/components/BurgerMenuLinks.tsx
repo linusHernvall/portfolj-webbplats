@@ -1,6 +1,12 @@
 import { Box, Container, Title } from '@mantine/core';
 
 function BurgerMenuLinks() {
+  const scrollToSection = (sectionId: string) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Box
       sx={{
@@ -49,7 +55,7 @@ function BurgerMenuLinks() {
               Kontakta
             </Title>
           </li>
-          <li>
+          <li onClick={() => scrollToSection('about')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Om oss
