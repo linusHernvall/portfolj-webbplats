@@ -1,29 +1,41 @@
-import { Box, Image, Text, Title, createStyles } from '@mantine/core';
+import { Box, Text, Title, createStyles } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 function ProcessSection() {
   // CSS ------------------------------------------------------------------------
 
   // Variabler / Functions ------------------------------------------------------
 
-  // TSX ------------------------------------------------------------------------
   const useStyles = createStyles(theme => ({
-    processTitle: {
-      fontSize: '44px',
-      [theme.fn.largerThan('sm')]: {
-        fontSize: '96px',
-      },
-    },
     processSection: {
       height: '25vh',
       [theme.fn.largerThan('sm')]: {
         height: '50vh',
       },
     },
+    processDesignSection: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      [theme.fn.largerThan('sm')]: {
+        flexDirection: 'row',
+      },
+    },
+    processDesignTextDiv: {
+      padding: '20px',
+      [theme.fn.largerThan('sm')]: {
+        width: '50%',
+      },
+    },
+    // reverse: {
+    //   order: 1,
+    // },
   }));
 
   const { classes } = useStyles();
-  // const theme = useMantineTheme();
+  const matches = useMediaQuery('(min-width: 48em)');
 
+  // TSX ------------------------------------------------------------------------
   return (
     <>
       <Box
@@ -35,16 +47,19 @@ function ProcessSection() {
           backgroundPosition: '30% center',
         }}
       >
-        <Title className={classes.processTitle} p='40px 0 0 30px' c='white'>
+        <Title order={matches ? 1 : 3} p='40px 0 0 30px' c='white'>
           ENHETLIG
         </Title>
-        <Title className={classes.processTitle} p='0 0 0 30px' c='white'>
+        <Title order={matches ? 1 : 3} p='0 0 0 30px' c='white'>
           PROCESS
         </Title>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <Box>
+      <Box className={classes.processDesignSection}>
+        <Box sx={{ order: 2, width: '100%' }}>
+          <Title order={4} p='20px 0' ta='center'>
+            Design
+          </Title>
           <Text>
             Vår webbyrå, ELD'S IT, är något alldeles speciellt när det kommer till att designa
             hemsidor från ett helhetsperspektiv. Vårt arbete handlar inte bara om att skapa vackra
@@ -67,7 +82,59 @@ function ProcessSection() {
             digitala närvaro är i de bästa och mest kompetenta händerna.
           </Text>
         </Box>
-        <Image src='/design.png' alt='Image showing people working on a computer from above' />
+        <Box
+          sx={{
+            width: '100%',
+            order: 1,
+            height: matches ? 'none' : '25vh',
+            backgroundImage: 'url("design.png")',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        ></Box>
+      </Box>
+      <Box className={classes.processDesignSection}>
+        <Box sx={{ width: '100%' }}>
+          <Title order={4} p='20px 0' ta='center'>
+            Utveckling
+          </Title>
+          <Text>
+            Vår webbyrå, ELD'S IT, är en kraft att räkna med när det gäller utveckling av hemsidor
+            med ett omfattande helhetsperspektiv. Vår kompetens sträcker sig bortom gränserna mellan
+            frontend och backend, vilket möjliggör skapandet av webbplatser som inte bara är
+            visuellt imponerande, utan också tekniskt solida och användarvänliga. Vi tar en
+            djupgående och målinriktad metod för att utveckla våra hemsidor. Vårt team av erfarna
+            utvecklare har expertis inom både frontend och backend, vilket innebär att vi kan skapa
+            en sömlös och sammanhängande användarupplevelse. Vi börjar med att förstå våra kunders
+            behov och mål, och bygger sedan upp tekniska lösningar som stöder dessa mål på alla
+            nivåer. Inom frontend-utveckling strävar vi efter att skapa användargränssnitt som inte
+            bara är estetiskt tilltalande, utan också intuitiva och lätta att använda. Vårt arbete
+            innefattar skapandet av responsiva och interaktiva element som engagerar besökare och
+            skapar en positiv användarupplevelse. På backend-sidan har vi djup kunskap om
+            systemarkitektur, databasdesign och hantering av komplexa funktioner. Vi bygger robusta
+            och skalbara lösningar som säkerställer att hemsidan kan hantera ökande trafik och
+            användarinteraktion utan problem. Vår kompetens är inte bara tekniskt inriktad, utan har
+            också en affärsmässig komponent. Vi förstår att en välutvecklad hemsida inte bara är en
+            teknisk prestation, utan också ett verktyg för att nå affärsmål. Därför arbetar vi nära
+            våra kunder för att integrera deras strategi och mål i utvecklingsprocessen. Med ELD'S
+            IT som partner kan du vara säker på att din hemsida inte bara kommer att vara tekniskt
+            robust och funktionell, utan också en kraftfull resurs för att uppnå dina affärsmål. Vår
+            helhetstäckande kompetens inom både frontend och backend-utveckling gör oss till det
+            självklara valet för företag som söker en pålitlig och skicklig partner för sina
+            digitala projekt.
+          </Text>
+        </Box>
+        <Box
+          sx={{
+            width: '100%',
+            height: matches ? 'none' : '25vh',
+            backgroundImage: 'url("utveckling.png")',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        ></Box>
       </Box>
     </>
   );
