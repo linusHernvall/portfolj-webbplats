@@ -36,6 +36,7 @@ function Footer() {
             sx={{
               display: 'flex',
               flexDirection: 'column',
+              alignItems: matches ? 'flex-start' : 'center',
             }}
           >
             <NavLink
