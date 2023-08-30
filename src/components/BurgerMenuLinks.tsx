@@ -31,25 +31,25 @@ function BurgerMenuLinks() {
             textAlign: 'right',
           }}
         >
-          <li>
+          <li onClick={() => scrollToSection('process')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Process
             </Title>
           </li>
-          <li>
+          <li onClick={() => scrollToSection('project')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Projekt
             </Title>
           </li>
-          <li>
+          <li onClick={() => scrollToSection('team')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Teamet
             </Title>
           </li>
-          <li>
+          <li onClick={() => scrollToSection('contact')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Kontakta
@@ -61,7 +61,7 @@ function BurgerMenuLinks() {
               Om oss
             </Title>
           </li>
-          <li>
+          <li onClick={() => scrollToSection('map')}>
             <Title order={2} weight={400} color='#FFFFFF'>
               {' '}
               Hitta hit

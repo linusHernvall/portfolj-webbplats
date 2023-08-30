@@ -18,15 +18,25 @@ function Home() {
     <div>
       <Subheader />
       <CollaborationSection />
-      <ProcessSection />
+      <div id='process'>
+        <ProcessSection />
+      </div>
       <TechStack />
-      <ProjectCarousel />
-      <CoworkerSection />
-      <ContactSection />
+      <div id='project'>
+        <ProjectCarousel />
+      </div>
+      <div id='team'>
+        <CoworkerSection />
+      </div>
+      <div id='contact'>
+        <ContactSection />
+      </div>
       <div id='about'>
         <AboutSection />
       </div>
-      <MapSection />
+      <div id='map'>
+        <MapSection />
+      </div>
     </div>
   );
 }
