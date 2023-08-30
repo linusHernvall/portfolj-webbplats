@@ -1,12 +1,12 @@
-import AboutSection from "../components/AboutSection";
-import CollaborationSection from "../components/CollaborationSection";
-import ContactSection from "../components/ContactSection";
-import CoworkerSection from "../components/CoworkerSection";
-import MapSection from "../components/MapSection";
-import ProcessSection from "../components/ProcessSection";
-import ProjectCarousel from "../components/ProjectCarousel";
-import Subheader from "../components/Subheader";
-import TechStack from "../components/TechStack";
+import AboutSection from '../components/AboutSection';
+import CollaborationSection from '../components/CollaborationSection';
+import ContactSection from '../components/ContactSection';
+import CoworkerSection from '../components/CoworkerSection';
+import MapSection from '../components/MapSection';
+import ProcessSection from '../components/ProcessSection';
+import ProjectCarousel from '../components/ProjectCarousel';
+import Subheader from '../components/Subheader';
+import TechStack from '../components/TechStack';
 
 function Home() {
   // CSS ------------------------------------------------------------------------
@@ -15,7 +15,7 @@ function Home() {
 
   // TSX ------------------------------------------------------------------------
   return (
-    <main>
+    <div>
       <Subheader />
       <CollaborationSection />
       <ProcessSection />
@@ -25,7 +25,7 @@ function Home() {
       <ContactSection />
       <AboutSection />
       <MapSection />
-    </main>
+    </div>
   );
 }
 
