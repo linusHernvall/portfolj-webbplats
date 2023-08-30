@@ -15,7 +15,7 @@ function Footer() {
         paddingTop: '1rem',
         paddingBottom: '1rem',
         display: 'flex',
-        gap: '0.5rem',
+        gap: '0.8rem',
         flexDirection: 'column',
         alignItems: 'center',
       }}
@@ -28,7 +28,7 @@ function Footer() {
           textDecoration: 'none',
         }}
       >
-        <Text fw={700}>VÅRT TEAM</Text>
+        <Text fw={600}>VÅRT TEAM</Text>
       </NavLink>
       <NavLink
         to=''
@@ -37,7 +37,7 @@ function Footer() {
           textDecoration: 'none',
         }}
       >
-        <Text fw={700}>KONTAKTA OSS</Text>
+        <Text fw={600}>KONTAKTA OSS</Text>
       </NavLink>
       <NavLink
         to=''
@@ -46,7 +46,7 @@ function Footer() {
           textDecoration: 'none',
         }}
       >
-        <Text fw={700}>OM OSS</Text>
+        <Text fw={600}>OM OSS</Text>
       </NavLink>
       <Group>
         <ActionIcon size='lg' variant='default' radius='xl'>
@@ -59,7 +59,7 @@ function Footer() {
           <IconBrandYoutube size='1.5rem' stroke='1.4' />
         </ActionIcon>
       </Group>
-      <Text fw={700} sx={{ color: 'white', fontSize: '12px' }}>
+      <Text fw={600} sx={{ color: 'white', fontSize: '12px' }}>
         ©ELD'S IT 2023
       </Text>
     </footer>
