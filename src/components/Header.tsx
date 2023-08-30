@@ -48,33 +48,33 @@ function Header() {
     <Box
       sx={{
         width: '100%',
-        padding: '1rem 1.5rem ',
         background: 'rgba(0,0,0,0.4)',
 
         position: 'fixed',
-        top: headerVisible ? '0' : '-200px',
+        top: headerVisible ? '0' : '-500px',
         left: 0,
-        transition: 'top 0.3s ease-in-out',
+        transition: 'top 0.5s ease-in-out',
         zIndex: 1000,
       }}
     >
-      <Container
-        maw={'1980px'}
-        p={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <NavLink onClick={scrollToTop} to='/'>
-          <img
-            style={{ height: '2rem' }}
-            src='/public/logo-lil-flame.png'
-            alt="ELD'S IT logotype"
-          />
-        </NavLink>
-        <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
+      <Container maw={'1980px'} p={0}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '1rem 1.5rem ',
+          }}
+        >
+          <NavLink onClick={scrollToTop} to='/'>
+            <img
+              style={{ height: '2rem' }}
+              src='/public/logo-lil-flame.png'
+              alt="ELD'S IT logotype"
+            />
+          </NavLink>
+          <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
+        </Box>
       </Container>
       {isBurgerMenuOpen && <BurgerMenuLinks />}
     </Box>
