@@ -7,12 +7,19 @@ interface BurgerMenuLinksProps {
 }
 
 function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen, style }: BurgerMenuLinksProps) {
+  const headerHeight = 66;
+
   const scrollToSection = (id: string) => {
     setHeaderVisible(false);
     setBurgerMenuOpen(false);
     const sectionElement = document.getElementById(id);
+
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      const position = sectionElement.offsetTop - headerHeight;
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+      });
     }
   };
   return (
