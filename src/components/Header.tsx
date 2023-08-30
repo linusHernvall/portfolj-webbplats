@@ -2,11 +2,18 @@ import { Box, Container } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
+import BurgerMenuLinks from './BurgerMenuLinks';
 
 function Header() {
   // Variabler / Functions ------------------------------------------------------
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
+
+  const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
+
+  function toggleBurgerMenu() {
+    setBurgerMenuOpen(!isBurgerMenuOpen);
+  }
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -67,8 +74,9 @@ function Header() {
             alt="ELD'S IT logotype"
           />
         </NavLink>
-        <BurgerMenu />
+        <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
       </Container>
+      {isBurgerMenuOpen && <BurgerMenuLinks />}
     </Box>
   );
 }
