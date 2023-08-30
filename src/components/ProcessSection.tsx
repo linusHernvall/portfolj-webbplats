@@ -8,7 +8,7 @@ function ProcessSection() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box bg="gray.5">Process Section</Box>
+      <Box sx={{backgroundImage: "url(\"paper.gif\")"}}>Process Section</Box>
     </>
   );
 }
