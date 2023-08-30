@@ -30,11 +30,13 @@ function Footer() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
+            alignItems: matches ? 'flex-start' : 'center',
           }}
         >
           <Group
             sx={{
               display: 'flex',
+              gap: matches ? '0.5rem' : '1rem',
               flexDirection: 'column',
               alignItems: matches ? 'flex-start' : 'center',
             }}
@@ -68,14 +70,14 @@ function Footer() {
             </NavLink>
           </Group>
           <Group pb={matches ? '0rem' : '1rem'}>
-            <ActionIcon size='lg' variant='default' radius='xl'>
-              <IconBrandInstagram size='1.5rem' stroke='1.4' />
+            <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
+              <IconBrandInstagram size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
             </ActionIcon>
-            <ActionIcon size='lg' variant='default' radius='xl'>
-              <IconBrandFacebook size='1.5rem' stroke='1.4' />
+            <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
+              <IconBrandFacebook size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
             </ActionIcon>
-            <ActionIcon size='lg' variant='default' radius='xl'>
-              <IconBrandYoutube size='1.5rem' stroke='1.4' />
+            <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
+              <IconBrandYoutube size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
             </ActionIcon>
           </Group>
         </Group>
