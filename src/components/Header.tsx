@@ -1,6 +1,7 @@
-import { Box } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import BurgerMenu from './BurgerMenu';
 
 function Header() {
   // Variabler / Functions ------------------------------------------------------
@@ -40,12 +41,8 @@ function Header() {
     <Box
       sx={{
         width: '100%',
-        height: '5rem',
-        padding: '0 1.5rem 0 1.5rem',
+        padding: '1rem 1.5rem ',
         background: 'rgba(0,0,0,0.4)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
 
         position: 'fixed',
         top: headerVisible ? '0' : '-200px',
@@ -54,10 +51,24 @@ function Header() {
         zIndex: 1000,
       }}
     >
-      <NavLink onClick={scrollToTop} to='/'>
-        <img style={{ height: '2rem' }} src='/public/logo-lil-flame.png' alt="ELD'S IT logotype" />
-      </NavLink>
-      <Box sx={{ width: '1rem', height: '1rem', background: 'white' }} />
+      <Container
+        maw={'1980px'}
+        p={0}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <NavLink onClick={scrollToTop} to='/'>
+          <img
+            style={{ height: '2rem' }}
+            src='/public/logo-lil-flame.png'
+            alt="ELD'S IT logotype"
+          />
+        </NavLink>
+        <BurgerMenu />
+      </Container>
     </Box>
   );
 }
