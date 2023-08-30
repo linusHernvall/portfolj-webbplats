@@ -3,9 +3,10 @@ import { Box, Container, Title } from '@mantine/core';
 interface BurgerMenuLinksProps {
   setHeaderVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setBurgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  style?: React.CSSProperties;
 }
 
-function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen }: BurgerMenuLinksProps) {
+function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen, style }: BurgerMenuLinksProps) {
   const scrollToSection = (id: string) => {
     setHeaderVisible(false);
     setBurgerMenuOpen(false);
@@ -21,6 +22,7 @@ function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen }: BurgerMenuLink
         background: 'rgba(24,100,171, 0.88)',
         padding: '1rem 1rem 8rem 0',
       }}
+      style={style}
     >
       <Container
         maw={'1980px'}
@@ -29,6 +31,7 @@ function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen }: BurgerMenuLink
           display: 'flex',
           justifyContent: 'flex-end',
         }}
+        style={style}
       >
         <ul
           style={{
@@ -36,6 +39,7 @@ function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen }: BurgerMenuLink
             listStyleType: 'none',
             textTransform: 'uppercase',
             textAlign: 'right',
+            cursor: 'pointer',
           }}
         >
           <li onClick={() => scrollToSection('process')}>

@@ -1,4 +1,4 @@
-import { Box, Container } from '@mantine/core';
+import { Box, Container, Transition } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
@@ -50,9 +50,9 @@ function Header() {
         background: 'rgba(0,0,0,0.4)',
 
         position: 'fixed',
-        top: headerVisible ? '0' : '-500px',
+        top: headerVisible ? '0' : '-200px',
         left: 0,
-        transition: 'top 0.5s ease-in-out',
+        transition: 'top 0.3s ease-in-out',
         zIndex: 1000,
       }}
     >
@@ -75,12 +75,15 @@ function Header() {
           <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
         </Box>
       </Container>
-      {isBurgerMenuOpen && (
-        <BurgerMenuLinks
-          setBurgerMenuOpen={setBurgerMenuOpen}
-          setHeaderVisible={setHeaderVisible}
-        />
-      )}
+      <Transition transition='slide-down' duration={400} mounted={isBurgerMenuOpen}>
+        {transitionStyles => (
+          <BurgerMenuLinks
+            setBurgerMenuOpen={setBurgerMenuOpen}
+            setHeaderVisible={setHeaderVisible}
+            style={{ ...transitionStyles }}
+          />
+        )}
+      </Transition>
     </Box>
   );
 }
