@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import Marquee from 'react-fast-marquee';
 
 function TechStack() {
   // CSS ------------------------------------------------------------------------
@@ -8,7 +8,13 @@ function TechStack() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box bg="blue.5">Techstach</Box>
+      <Marquee speed={25} autoFill>
+        <img height='40px' src='/public/react-logo.png' />
+        <img height='40px' src='/public/typeScript-logo.png' />
+        <img height='40px' src='/public/angular-logo.png' />
+        <img height='40px' src='/public/mantine-logo.png' />
+        <img height='40px' src='/public/vue-logo.png' />
+      </Marquee>
     </>
   );
 }
