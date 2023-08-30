@@ -1,19 +1,22 @@
 import { Box, Container, Transition } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
 import BurgerMenuLinks from './BurgerMenuLinks';
 
 function Header() {
-  // Variabler / Functions ------------------------------------------------------
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState<number | null>(null);
+
+  const headerRef = useRef<HTMLDivElement>(null);
 
   function toggleBurgerMenu() {
     setBurgerMenuOpen(!isBurgerMenuOpen);
   }
 
+  // Scroll to the top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -25,30 +28,42 @@ function Header() {
     const handleScroll = () => {
       const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        // If we scroll down
         setHeaderVisible(false);
       } else {
-        // If we scroll up
         setHeaderVisible(true);
       }
-      setLastScrollTop(st <= 0 ? 0 : st); // For Mobile or negative scrolling
+      setLastScrollTop(st <= 0 ? 0 : st);
     };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      // Cleanup
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollTop]);
 
-  // TSX ------------------------------------------------------------------------
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        const { height } = headerRef.current.getBoundingClientRect();
+        setHeaderHeight(height);
+      }
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateHeaderHeight);
+    };
+  }, []);
+
   return (
     <Box
+      ref={headerRef}
       sx={{
         width: '100%',
         background: 'rgba(0,0,0,0.4)',
-
         position: 'fixed',
         top: headerVisible ? '0' : '-200px',
         left: 0,
@@ -78,6 +93,7 @@ function Header() {
       <Transition transition='slide-down' duration={400} mounted={isBurgerMenuOpen}>
         {transitionStyles => (
           <BurgerMenuLinks
+            headerHeight={headerHeight} // Pass header height to BurgerMenuLinks
             setBurgerMenuOpen={setBurgerMenuOpen}
             setHeaderVisible={setHeaderVisible}
             style={{ ...transitionStyles }}
@@ -87,4 +103,5 @@ function Header() {
     </Box>
   );
 }
+
 export default Header;

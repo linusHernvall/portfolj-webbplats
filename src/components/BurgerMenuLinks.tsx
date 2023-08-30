@@ -1,21 +1,25 @@
 import { Box, Container, Title } from '@mantine/core';
 
 interface BurgerMenuLinksProps {
+  headerHeight?: number | null;
   setHeaderVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setBurgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   style?: React.CSSProperties;
 }
 
-function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen, style }: BurgerMenuLinksProps) {
-  const headerHeight = 66;
-
+function BurgerMenuLinks({
+  headerHeight,
+  setHeaderVisible,
+  setBurgerMenuOpen,
+  style,
+}: BurgerMenuLinksProps) {
   const scrollToSection = (id: string) => {
     setHeaderVisible(false);
     setBurgerMenuOpen(false);
     const sectionElement = document.getElementById(id);
 
     if (sectionElement) {
-      const position = sectionElement.offsetTop - headerHeight;
+      const position = sectionElement.offsetTop - (headerHeight ?? 0);
       window.scrollTo({
         top: position,
         behavior: 'smooth',
