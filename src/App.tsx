@@ -10,7 +10,7 @@ function App() {
       <Header />
       <main style={{ marginTop: '5rem' }}>
         <ScrollToTop />
-        <Container maw={'1980px'}>
+        <Container maw={'1980px'} p={0}>
           <Outlet />
         </Container>
       </main>
