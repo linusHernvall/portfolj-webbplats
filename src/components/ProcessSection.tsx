@@ -13,7 +13,7 @@ function ProcessSection() {
         height: '50vh',
       },
     },
-    processDesignSection: {
+    processSections: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -54,13 +54,13 @@ function ProcessSection() {
           PROCESS
         </Title>
       </Box>
-
-      <Box className={classes.processDesignSection}>
-        <Box sx={{ order: 2, width: '100%' }}>
+      {/* DESIGN SECTION----------------------------------------------------------------------------- */}
+      <Box className={classes.processSections}>
+        <Box sx={{ width: '100%' }}>
           <Title order={4} p='20px 0' ta='center'>
             Design
           </Title>
-          <Text>
+          <Text p={matches ? '0 10%' : '0 10px'}>
             Vår webbyrå, ELD'S IT, är något alldeles speciellt när det kommer till att designa
             hemsidor från ett helhetsperspektiv. Vårt arbete handlar inte bara om att skapa vackra
             sidor, utan om att skapa meningsfulla och funktionella digitala platser som verkligen
@@ -85,7 +85,6 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            order: 1,
             height: matches ? 'none' : '25vh',
             backgroundImage: 'url("design.png")',
             backgroundRepeat: 'no-repeat',
@@ -94,12 +93,13 @@ function ProcessSection() {
           }}
         ></Box>
       </Box>
-      <Box className={classes.processDesignSection}>
-        <Box sx={{ width: '100%' }}>
+      {/* UTVECKLING SECTION----------------------------------------------------------------------------- */}
+      <Box className={classes.processSections}>
+        <Box sx={{ order: matches ? 2 : 1, width: '100%' }}>
           <Title order={4} p='20px 0' ta='center'>
             Utveckling
           </Title>
-          <Text>
+          <Text p={matches ? '0 10%' : '0 10px'}>
             Vår webbyrå, ELD'S IT, är en kraft att räkna med när det gäller utveckling av hemsidor
             med ett omfattande helhetsperspektiv. Vår kompetens sträcker sig bortom gränserna mellan
             frontend och backend, vilket möjliggör skapandet av webbplatser som inte bara är
@@ -123,6 +123,50 @@ function ProcessSection() {
             helhetstäckande kompetens inom både frontend och backend-utveckling gör oss till det
             självklara valet för företag som söker en pålitlig och skicklig partner för sina
             digitala projekt.
+          </Text>
+        </Box>
+        <Box
+          sx={{
+            width: '100%',
+            order: matches ? 1 : 2,
+            height: matches ? 'none' : '25vh',
+            backgroundImage: 'url("utveckling.png")',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        ></Box>
+      </Box>
+      {/* LANSERING SECTION----------------------------------------------------------------------------- */}
+      <Box className={classes.processSections}>
+        <Box sx={{ width: '100%' }}>
+          <Title order={4} p='20px 0' ta='center'>
+            Lansering
+          </Title>
+          <Text p={matches ? '0 10%' : '0 10px'}>
+            När det kommer till att hjälpa våra kunder att lansera sina färdigställda produkter går
+            ELD'S IT bortom utveckling och design. Vår fullständiga och engagerade support sträcker
+            sig även till lanseringsfasen, där vi säkerställer att produkten når målgruppen på bästa
+            sätt och får den uppmärksamhet den förtjänar. Vårt team är med våra kunder varje steg på
+            vägen, från utveckling till lansering. Vi förstår att en framgångsrik lansering handlar
+            om mer än bara tekniken. Det handlar om att skapa buzz och generera intresse. Vi arbetar
+            tillsammans med våra kunder för att utveckla en lanseringsstrategi som passar deras mål
+            och målgrupp. Vår kompetens inom design och användarupplevelse spelar en avgörande roll
+            i detta skede. Vi säkerställer att den färdigställda produkten inte bara är tekniskt
+            stabil, utan också estetiskt tilltalande och användarvänlig. Detta är särskilt viktigt
+            vid lanseringen, då det första intrycket kan göra en stor skillnad. Vi arbetar också med
+            att testa och optimera produkten innan den lanseras. Detta innefattar att säkerställa
+            att hemsidan fungerar korrekt på olika enheter och webbläsare samt att lasttesta den för
+            att hantera eventuella trafikspikar. Genom att vara förberedda på olika scenarier vid
+            lanseringen minimerar vi risken för tekniska problem som kan påverka användarupplevelsen
+            negativt. Vårt engagemang sträcker sig också till att övervaka och analysera produktens
+            prestanda efter lanseringen. Vi använder olika verktyg och analyser för att utvärdera
+            hur användare interagerar med produkten och hur den påverkar affärsmålen. Om det behövs
+            gör vi justeringar för att optimera resultat och uppnå önskade mål. ELD'S IT går långt
+            bortom att bara leverera en färdig produkt. Vi är med våra kunder hela vägen, och vårt
+            mål är att säkerställa att varje lansering är en framgångsrik och minnesvärd händelse.
+            Med vår kompetens och engagemang är vi redo att hjälpa våra kunder att ta steget från
+            utveckling till framgångsrik lansering och bortom.
           </Text>
         </Box>
         <Box
