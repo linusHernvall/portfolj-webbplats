@@ -1,8 +1,15 @@
 import { Box, Container, Title } from '@mantine/core';
 
-function BurgerMenuLinks() {
-  const scrollToSection = (sectionId: string) => {
-    const sectionElement = document.getElementById(sectionId);
+interface BurgerMenuLinksProps {
+  setHeaderVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  setBurgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function BurgerMenuLinks({ setHeaderVisible, setBurgerMenuOpen }: BurgerMenuLinksProps) {
+  const scrollToSection = (id: string) => {
+    setHeaderVisible(false);
+    setBurgerMenuOpen(false);
+    const sectionElement = document.getElementById(id);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' });
     }

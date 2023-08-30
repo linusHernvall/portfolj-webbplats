@@ -8,7 +8,6 @@ function Header() {
   // Variabler / Functions ------------------------------------------------------
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
-
   const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
 
   function toggleBurgerMenu() {
@@ -76,7 +75,12 @@ function Header() {
           <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
         </Box>
       </Container>
-      {isBurgerMenuOpen && <BurgerMenuLinks />}
+      {isBurgerMenuOpen && (
+        <BurgerMenuLinks
+          setBurgerMenuOpen={setBurgerMenuOpen}
+          setHeaderVisible={setHeaderVisible}
+        />
+      )}
     </Box>
   );
 }
