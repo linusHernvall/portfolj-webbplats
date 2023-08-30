@@ -48,7 +48,9 @@ function Footer() {
                 textDecoration: 'none',
               }}
             >
-              <Text fw={600}>VÅRT TEAM</Text>
+              <Text size='12px' fw={700}>
+                VÅRT TEAM
+              </Text>
             </NavLink>
             <NavLink
               to=''
@@ -57,7 +59,9 @@ function Footer() {
                 textDecoration: 'none',
               }}
             >
-              <Text fw={600}>KONTAKTA OSS</Text>
+              <Text size='12px' fw={700}>
+                KONTAKTA OSS
+              </Text>
             </NavLink>
             <NavLink
               to=''
@@ -66,7 +70,9 @@ function Footer() {
                 textDecoration: 'none',
               }}
             >
-              <Text fw={600}>OM OSS</Text>
+              <Text size='12px' fw={700}>
+                OM OSS
+              </Text>
             </NavLink>
           </Group>
           <Group pb={matches ? '0rem' : '1rem'}>
@@ -83,7 +89,7 @@ function Footer() {
         </Group>
       </Group>
       <Text
-        fw={600}
+        fw={700}
         sx={{
           display: 'flex',
           justifyContent: 'center',
