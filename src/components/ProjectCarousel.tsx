@@ -18,13 +18,11 @@ function ProjectCarousel() {
       slideSize='100%'
       height={800} 
       align='center'
-      slideGap="xs" 
       controlsOffset="xs" 
       controlSize={27} 
       draggable={false} 
       withIndicators
-      initialSlide={1}
-      slidesToScroll='auto'
+      initialSlide={0}
       breakpoints={[{ maxWidth: '100vw', slideSize: '100%' }]}
       >
         
