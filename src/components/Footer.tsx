@@ -1,13 +1,31 @@
-import { ActionIcon, Group, Text } from '@mantine/core';
+import { ActionIcon, Box, Group, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { NavLink } from 'react-router-dom';
 import { BrandFacebook, BrandInstagram, BrandYoutube } from 'tabler-icons-react';
 
 function Footer() {
-  // CSS ------------------------------------------------------------------------
-
   // Variabler / Functions ------------------------------------------------------
   const matches = useMediaQuery('(min-width: 48em)');
+
+  // Scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToSection = (id: string) => {
+    const sectionElement = document.getElementById(id);
+
+    if (sectionElement) {
+      const position = sectionElement.offsetTop - 66;
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+      });
+    }
+  };
   // TSX ------------------------------------------------------------------------
   return (
     <footer
@@ -25,7 +43,13 @@ function Footer() {
           justifyContent: matches ? 'space-between' : 'center',
         }}
       >
-        <img style={{ height: '4rem' }} src='/public/logo-lil-flame.png' alt="ELD'S IT logotype" />
+        <NavLink onClick={scrollToTop} to='/'>
+          <img
+            style={{ height: '4rem' }}
+            src='/public/logo-lil-flame.png'
+            alt="ELD'S IT logotype"
+          />
+        </NavLink>
         <Group
           sx={{
             display: 'flex',
@@ -41,39 +65,42 @@ function Footer() {
               alignItems: matches ? 'flex-start' : 'center',
             }}
           >
-            <NavLink
-              to=''
+            <Box
+              onClick={() => scrollToSection('team')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 VÅRT TEAM
               </Text>
-            </NavLink>
-            <NavLink
-              to=''
+            </Box>
+            <Box
+              onClick={() => scrollToSection('contact')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 KONTAKTA OSS
               </Text>
-            </NavLink>
-            <NavLink
-              to=''
+            </Box>
+            <Box
+              onClick={() => scrollToSection('about')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 OM OSS
               </Text>
-            </NavLink>
+            </Box>
           </Group>
           <Group pb={matches ? '0rem' : '1rem'}>
             <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
