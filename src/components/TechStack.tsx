@@ -9,24 +9,24 @@ function TechStack() {
   return (
     <>
       <Marquee speed={25} autoFill>
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/html-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/css-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/javascript-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/typescript-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/bootstrap-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/angular-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/nodejs-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/nodemon-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/c-sharp-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/python-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/java-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/php-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/ruby-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/vue-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/figma-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/photoshop-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/vite-icon.svg' />
-        <img height='40px' style={{ marginRight: '2.3rem' }} src='/public/cypress-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/html-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/css-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/javascript-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/typescript-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/bootstrap-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/angular-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/nodejs-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/nodemon-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/c-sharp-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/python-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/java-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/php-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/ruby-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/vue-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/figma-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/photoshop-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/vite-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/cypress-icon.svg' />
       </Marquee>
     </>
   );
