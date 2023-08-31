@@ -9,11 +9,11 @@ function TechStack() {
   return (
     <>
       <Marquee speed={25} autoFill>
-        <img height='40px' src='/public/react-logo.png' />
-        <img height='40px' src='/public/typeScript-logo.png' />
-        <img height='40px' src='/public/angular-logo.png' />
-        <img height='40px' src='/public/mantine-logo.png' />
-        <img height='40px' src='/public/vue-logo.png' />
+        <img height='40px' style={{ marginRight: '2rem' }} src='/public/react-logo.png' />
+        <img height='40px' style={{ marginRight: '2rem' }} src='/public/typeScript-logo.png' />
+        <img height='40px' style={{ marginRight: '2rem' }} src='/public/angular-logo.png' />
+        <img height='40px' style={{ marginRight: '2rem' }} src='/public/mantine-logo.png' />
+        <img height='40px' style={{ marginRight: '2rem' }} src='/public/vue-logo.png' />
       </Marquee>
     </>
   );
