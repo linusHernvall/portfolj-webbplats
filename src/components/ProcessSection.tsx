@@ -47,20 +47,26 @@ function ProcessSection() {
           backgroundPosition: '30% center',
         }}
       >
-        <Title order={matches ? 1 : 3} p='40px 0 0 30px' c='white'>
+        {matches ? <Title fz="96px" p='40px 0 0 30px' c='white'>
           ENHETLIG
-        </Title>
-        <Title order={matches ? 1 : 3} p='0 0 0 30px' c='white'>
+        </Title> : <Title order={1} p='40px 0 0 30px' c='white'>
+          ENHETLIG
+        </Title>}
+
+        {matches ? <Title fz="96px" p='0 0 0 30px' c='white'>
           PROCESS
-        </Title>
+        </Title> : <Title order={1} p='0 0 0 30px' c='white'>
+          PROCESS
+        </Title>}
+
       </Box>
       {/* DESIGN SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ width: '100%' }}>
-          <Title order={4} p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Design
           </Title>
-          <Text p={matches ? '0 10%' : '0 10px'}>
+          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
             Vår webbyrå, ELD'S IT, är något alldeles speciellt när det kommer till att designa
             hemsidor från ett helhetsperspektiv. Vårt arbete handlar inte bara om att skapa vackra
             sidor, utan om att skapa meningsfulla och funktionella digitala platser som verkligen
@@ -96,10 +102,10 @@ function ProcessSection() {
       {/* UTVECKLING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ order: matches ? 2 : 1, width: '100%' }}>
-          <Title order={4} p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Utveckling
           </Title>
-          <Text p={matches ? '0 10%' : '0 10px'}>
+          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
             Vår webbyrå, ELD'S IT, är en kraft att räkna med när det gäller utveckling av hemsidor
             med ett omfattande helhetsperspektiv. Vår kompetens sträcker sig bortom gränserna mellan
             frontend och backend, vilket möjliggör skapandet av webbplatser som inte bara är
@@ -140,10 +146,10 @@ function ProcessSection() {
       {/* LANSERING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ width: '100%' }}>
-          <Title order={4} p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Lansering
           </Title>
-          <Text p={matches ? '0 10%' : '0 10px'}>
+          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
             När det kommer till att hjälpa våra kunder att lansera sina färdigställda produkter går
             ELD'S IT bortom utveckling och design. Vår fullständiga och engagerade support sträcker
             sig även till lanseringsfasen, där vi säkerställer att produkten når målgruppen på bästa
