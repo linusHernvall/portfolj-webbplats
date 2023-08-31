@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Box, Title } from '@mantine/core';
 
 function Subheader() {
   // CSS ------------------------------------------------------------------------
@@ -8,7 +8,18 @@ function Subheader() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box sx={{backgroundImage: "url(/subhead-image)"}} >IMAGFE HÄR</Box>
+      <Box
+        h={'60vh'}
+        sx={{
+          backgroundImage: 'url("subhead-image.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: '30% center',
+        }}
+      >
+        <Title order={1}>DIN WEBBYRÅ</Title>
+        <Title>FÖR HELTÄCKANDE IT-LÖSNINGAR</Title>
+      </Box>
     </>
   );
 }
