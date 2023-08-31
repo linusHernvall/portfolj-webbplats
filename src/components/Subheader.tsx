@@ -1,4 +1,5 @@
 import { Box, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 function Subheader() {
   // CSS ------------------------------------------------------------------------
@@ -6,6 +7,8 @@ function Subheader() {
   // Variabler / Functions ------------------------------------------------------
 
   // TSX ------------------------------------------------------------------------
+
+  const matches = useMediaQuery('(min-width: 48em)');
   return (
     <>
       <Box
@@ -17,8 +20,24 @@ function Subheader() {
           backgroundPosition: '30% center',
         }}
       >
-        <Title order={1}>DIN WEBBYRÅ</Title>
-        <Title>FÖR HELTÄCKANDE IT-LÖSNINGAR</Title>
+        {matches ? (
+          <Title fz='96px' pt='25vh' ta='right' c='white'>
+            DIN WEBBYRÅ
+          </Title>
+        ) : (
+          <Title fz='48px' pt='25vh' ta='right' c='white'>
+            DIN WEBBYRÅ
+          </Title>
+        )}
+        {matches ? (
+          <Title order={1} ta='right' c='white'>
+            FÖR HELTÄCKANDE IT-LÖSNINGAR
+          </Title>
+        ) : (
+          <Title order={2} ta='right' c='white'>
+            FÖR HELTÄCKANDE IT-LÖSNINGAR
+          </Title>
+        )}
       </Box>
     </>
   );
