@@ -8,7 +8,7 @@ function ProcessSection() {
 
   const useStyles = createStyles(theme => ({
     processSection: {
-      height: '25vh',
+      height: '35vh',
       [theme.fn.largerThan('sm')]: {
         height: '50vh',
       },
@@ -91,7 +91,7 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            height: matches ? 'none' : '25vh',
+            height: matches ? 'none' : '45vh',
             backgroundImage: 'url("design.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -135,7 +135,7 @@ function ProcessSection() {
           sx={{
             width: '100%',
             order: matches ? 1 : 2,
-            height: matches ? 'none' : '25vh',
+            height: matches ? 'none' : '45vh',
             backgroundImage: 'url("utveckling.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -178,7 +178,7 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            height: matches ? 'none' : '25vh',
+            height: matches ? 'none' : '45vh',
             backgroundImage: 'url("utveckling.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
