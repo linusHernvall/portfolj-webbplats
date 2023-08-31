@@ -9,7 +9,7 @@ function ProcessSection() {
   const useStyles = createStyles(theme => ({
     processSection: {
       height: '35vh',
-      [theme.fn.largerThan('sm')]: {
+      [theme.fn.largerThan('md')]: {
         height: '50vh',
       },
     },
@@ -17,13 +17,13 @@ function ProcessSection() {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      [theme.fn.largerThan('sm')]: {
+      [theme.fn.largerThan('md')]: {
         flexDirection: 'row',
       },
     },
     processDesignTextDiv: {
       padding: '20px',
-      [theme.fn.largerThan('sm')]: {
+      [theme.fn.largerThan('md')]: {
         width: '50%',
       },
     },
@@ -33,7 +33,7 @@ function ProcessSection() {
   }));
 
   const { classes } = useStyles();
-  const matches = useMediaQuery('(min-width: 48em)');
+  const matches = useMediaQuery('(min-width: 64em)');
 
   // TSX ------------------------------------------------------------------------
   return (
@@ -47,26 +47,33 @@ function ProcessSection() {
           backgroundPosition: '30% center',
         }}
       >
-        {matches ? <Title fz="96px" p='40px 0 0 30px' c='white'>
-          ENHETLIG
-        </Title> : <Title order={1} p='40px 0 0 30px' c='white'>
-          ENHETLIG
-        </Title>}
+        {matches ? (
+          <Title fz='96px' p='40px 0 0 30px' c='white'>
+            ENHETLIG
+          </Title>
+        ) : (
+          <Title order={1} p='40px 0 0 30px' c='white'>
+            ENHETLIG
+          </Title>
+        )}
 
-        {matches ? <Title fz="96px" p='0 0 0 30px' c='white'>
-          PROCESS
-        </Title> : <Title order={1} p='0 0 0 30px' c='white'>
-          PROCESS
-        </Title>}
-
+        {matches ? (
+          <Title fz='96px' p='0 0 0 30px' c='white'>
+            PROCESS
+          </Title>
+        ) : (
+          <Title order={1} p='0 0 0 30px' c='white'>
+            PROCESS
+          </Title>
+        )}
       </Box>
       {/* DESIGN SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
-        <Box sx={{ width: '100%' }}>
-          <Title order={2} p='20px 0' ta='center'>
+        <Box sx={{ width: '100%', order: matches ? 2 : 0 }}>
+          <Title p='20px 0' ta='center'>
             Design
           </Title>
-          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
+          <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
             Vår webbyrå, ELD'S IT, är något alldeles speciellt när det kommer till att designa
             hemsidor från ett helhetsperspektiv. Vårt arbete handlar inte bara om att skapa vackra
             sidor, utan om att skapa meningsfulla och funktionella digitala platser som verkligen
@@ -91,7 +98,8 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            height: matches ? 'none' : '45vh',
+            // order: matches ?? 1,
+            height: matches ? 'none' : '55vh',
             backgroundImage: 'url("design.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -101,11 +109,11 @@ function ProcessSection() {
       </Box>
       {/* UTVECKLING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
-        <Box sx={{ order: matches ? 2 : 1, width: '100%' }}>
-          <Title order={2} p='20px 0' ta='center'>
+        <Box sx={{ width: '100%' }}>
+          <Title p='20px 0' ta='center'>
             Utveckling
           </Title>
-          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
+          <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
             Vår webbyrå, ELD'S IT, är en kraft att räkna med när det gäller utveckling av hemsidor
             med ett omfattande helhetsperspektiv. Vår kompetens sträcker sig bortom gränserna mellan
             frontend och backend, vilket möjliggör skapandet av webbplatser som inte bara är
@@ -134,8 +142,7 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            order: matches ? 1 : 2,
-            height: matches ? 'none' : '45vh',
+            height: matches ? 'none' : '55vh',
             backgroundImage: 'url("utveckling.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -145,11 +152,11 @@ function ProcessSection() {
       </Box>
       {/* LANSERING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
-        <Box sx={{ width: '100%' }}>
-          <Title order={2} p='20px 0' ta='center'>
+        <Box sx={{ width: '100%', order: matches ? 2 : 0 }}>
+          <Title p='20px 0' ta='center'>
             Lansering
           </Title>
-          <Text p={matches ? '0 10% 10px' : '0 10px 10px'}>
+          <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
             När det kommer till att hjälpa våra kunder att lansera sina färdigställda produkter går
             ELD'S IT bortom utveckling och design. Vår fullständiga och engagerade support sträcker
             sig även till lanseringsfasen, där vi säkerställer att produkten når målgruppen på bästa
@@ -178,8 +185,8 @@ function ProcessSection() {
         <Box
           sx={{
             width: '100%',
-            height: matches ? 'none' : '45vh',
-            backgroundImage: 'url("utveckling.png")',
+            height: matches ? 'none' : '55vh',
+            backgroundImage: 'url("lansering.png")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
