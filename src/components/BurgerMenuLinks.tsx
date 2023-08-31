@@ -45,10 +45,8 @@ function BurgerMenuLinks({
 
   // This effect runs whenever the component mounts, ensuring it scrolls to the correct section if needed
   useEffect(() => {
-    console.log('useEffect triggered');
     const hash = window.location.hash.substring(1);
     if (hash) {
-      console.log('hash found:', hash);
       scrollIfHomePage(hash);
     }
   }, []);

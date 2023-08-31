@@ -1,5 +1,6 @@
 import { ActionIcon, Box, Group, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { BrandFacebook, BrandInstagram, BrandYoutube } from 'tabler-icons-react';
 
@@ -15,7 +16,7 @@ function Footer() {
     });
   };
 
-  const scrollToSection = (id: string) => {
+  const scrollIfHomePage = (id: string) => {
     const sectionElement = document.getElementById(id);
 
     if (sectionElement) {
@@ -26,6 +27,27 @@ function Footer() {
       });
     }
   };
+
+  // Check if we're already on the homepage
+  const isHomePage = window.location.pathname === '/';
+
+  const scrollToSection = (id: string) => {
+    // If already on the homepage, just scroll
+    if (isHomePage) {
+      scrollIfHomePage(id);
+    } else {
+      // Navigate to the homepage and append the hash for the section
+      window.location.href = `/#${id}`;
+    }
+  };
+
+  // This effect runs whenever the component mounts, ensuring it scrolls to the correct section if needed
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      scrollIfHomePage(hash);
+    }
+  }, []);
   // TSX ------------------------------------------------------------------------
   return (
     <footer
