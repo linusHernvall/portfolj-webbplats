@@ -1,4 +1,5 @@
 import { Box, Container, Title } from '@mantine/core';
+import { useEffect } from 'react';
 
 interface BurgerMenuLinksProps {
   headerHeight?: number | null;
@@ -13,9 +14,8 @@ function BurgerMenuLinks({
   setBurgerMenuOpen,
   style,
 }: BurgerMenuLinksProps) {
-  const scrollToSection = (id: string) => {
-    setHeaderVisible(false);
-    setBurgerMenuOpen(false);
+  // Function to scroll to a section if already on the homepage
+  const scrollIfHomePage = (id: string) => {
     const sectionElement = document.getElementById(id);
 
     if (sectionElement) {
@@ -26,6 +26,32 @@ function BurgerMenuLinks({
       });
     }
   };
+
+  // Check if we're already on the homepage
+  const isHomePage = window.location.pathname === '/';
+
+  const scrollToSection = (id: string) => {
+    setHeaderVisible(false);
+    setBurgerMenuOpen(false);
+
+    // If already on the homepage, just scroll
+    if (isHomePage) {
+      scrollIfHomePage(id);
+    } else {
+      // Navigate to the homepage and append the hash for the section
+      window.location.href = `/#${id}`;
+    }
+  };
+
+  // This effect runs whenever the component mounts, ensuring it scrolls to the correct section if needed
+  useEffect(() => {
+    console.log('useEffect triggered');
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      console.log('hash found:', hash);
+      scrollIfHomePage(hash);
+    }
+  }, []);
   return (
     <Box
       sx={{
