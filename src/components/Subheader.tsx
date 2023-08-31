@@ -8,7 +8,7 @@ function Subheader() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box bg="blue.9">Subheader Section</Box>
+      <Box sx={{backgroundImage: "url(/subhead-image)"}} >IMAGFE HÄR</Box>
     </>
   );
 }
