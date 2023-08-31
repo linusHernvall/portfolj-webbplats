@@ -54,37 +54,91 @@ function BurgerMenuLinks({
           }}
         >
           <li onClick={() => scrollToSection('process')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Process
             </Title>
           </li>
           <li onClick={() => scrollToSection('project')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Projekt
             </Title>
           </li>
           <li onClick={() => scrollToSection('team')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Teamet
             </Title>
           </li>
           <li onClick={() => scrollToSection('contact')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Kontakta
             </Title>
           </li>
           <li onClick={() => scrollToSection('about')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Om oss
             </Title>
           </li>
           <li onClick={() => scrollToSection('map')}>
-            <Title order={2} weight={400} color='#FFFFFF'>
+            <Title
+              sx={{
+                '&:hover': {
+                  color: 'rgba(0,0,0,0.4)',
+                },
+              }}
+              order={2}
+              weight={400}
+              color='#FFFFFF'
+            >
               {' '}
               Hitta hit
             </Title>
