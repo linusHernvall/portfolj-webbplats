@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import AboutSection from '../components/AboutSection';
 import CollaborationSection from '../components/CollaborationSection';
 import ContactSection from '../components/ContactSection';
@@ -14,6 +15,19 @@ function Home() {
   // Variabler / Functions ------------------------------------------------------
 
   // TSX ------------------------------------------------------------------------
+  // This effect runs when the component mounts
+  useEffect(() => {
+    // Retrieve the hash from the URL
+    const hash = window.location.hash.substring(1);
+
+    // Use the hash to find an element with the corresponding id
+    const element = document.getElementById(hash);
+
+    // If such an element exists, scroll to it
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []); // Empty dependency array means this effect runs once when the component mounts
   return (
     <div>
       <Subheader />
