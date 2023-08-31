@@ -25,9 +25,22 @@ function Home() {
 
     // If such an element exists, scroll to it
     if (element) {
+      // Get the distance to scroll
+      const distance = Math.abs(window.pageYOffset - element.offsetTop);
+
+      // Estimate the time it will take to scroll there: 1 ms per pixel scrolled
+      // You can adjust the multiplier as needed
+      const estimatedTime = distance * 1;
+
+      // Scroll to the section
       element.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove the hash from the URL after scrolling completes
+      setTimeout(() => {
+        history.replaceState(null, document.title, window.location.pathname);
+      }, estimatedTime);
     }
-  }, []); // Empty dependency array means this effect runs once when the component mounts
+  }, []);
   return (
     <div>
       <Subheader />

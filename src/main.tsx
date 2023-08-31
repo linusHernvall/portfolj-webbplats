@@ -34,6 +34,7 @@ export function Root() {
             sizes: {
               h1: { fontSize: '42px' },
               h2: { fontSize: '32px', fontWeight: 100 },
+              h3: { fontSize: '20px' },
             },
           },
         }}
