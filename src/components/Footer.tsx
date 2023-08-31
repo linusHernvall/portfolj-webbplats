@@ -1,12 +1,14 @@
 import { ActionIcon, Box, Group, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { BrandFacebook, BrandInstagram, BrandYoutube } from 'tabler-icons-react';
 
 function Footer() {
   // Variabler / Functions ------------------------------------------------------
   const matches = useMediaQuery('(min-width: 48em)');
+
+  const location = useLocation();
 
   // Scroll to the top
   const scrollToTop = () => {
@@ -28,15 +30,15 @@ function Footer() {
     }
   };
 
-  // Check if we're already on the homepage
-  const isHomePage = window.location.pathname === '/';
+  const isHomePage = location.pathname === '/';
 
+  // Check if we're already on the homepage
   const scrollToSection = (id: string) => {
-    // If already on the homepage, just scroll
     if (isHomePage) {
+      console.log('Trying to scroll to section when on homepage: ', id);
       scrollIfHomePage(id);
     } else {
-      // Navigate to the homepage and append the hash for the section
+      console.log('Trying to scroll to homepage: ', id);
       window.location.href = `/#${id}`;
     }
   };
