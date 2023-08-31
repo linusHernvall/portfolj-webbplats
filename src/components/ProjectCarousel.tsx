@@ -23,7 +23,7 @@ function ProjectCarousel() {
       
         <Carousel
           slideSize={slideSize}
-          height={800}
+          
           align='center'
           controlsOffset="xs"
           controlSize={27}
