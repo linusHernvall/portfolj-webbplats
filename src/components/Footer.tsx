@@ -1,7 +1,7 @@
 import { ActionIcon, Group, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube } from '@tabler/icons-react';
 import { NavLink } from 'react-router-dom';
+import { BrandFacebook, BrandInstagram, BrandYoutube } from 'tabler-icons-react';
 
 function Footer() {
   // CSS ------------------------------------------------------------------------
@@ -77,13 +77,13 @@ function Footer() {
           </Group>
           <Group pb={matches ? '0rem' : '1rem'}>
             <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
-              <IconBrandInstagram size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
+              <BrandInstagram size={40} strokeWidth={1.3} color={'black'} />
             </ActionIcon>
             <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
-              <IconBrandFacebook size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
+              <BrandFacebook size={40} strokeWidth={1.3} color={'black'} />
             </ActionIcon>
             <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
-              <IconBrandYoutube size={matches ? '2rem' : '1.5rem'} stroke='1.4' />
+              <BrandYoutube size={40} strokeWidth={1.3} color={'black'} />
             </ActionIcon>
           </Group>
         </Group>
