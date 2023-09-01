@@ -44,6 +44,7 @@ function CollaborationSection() {
     height: '140px',
     marginLeft: '30px',
     marginRight: '30px',
+    marginBottom: '30px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -56,6 +57,7 @@ function CollaborationSection() {
     height: '140px',
     marginLeft: '0px',
     marginRight: '0px',
+    marginBottom: '0px',
   };
 
   const imageStyle: React.CSSProperties = {
