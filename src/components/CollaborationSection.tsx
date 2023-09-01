@@ -55,31 +55,41 @@ function CollaborationSection() {
   };
 
   return (
-    <div style={containerStyle} className="collaboration-images">
-      <div className="container">
+    <div style={containerStyle} className='collaboration-images'>
+      <div className='container'>
         <h2 style={headingStyle}>SAMARBETSPARTNERS</h2>
-        <div style={imageContainerStyle} className="image-container">
-          <a href="#project" onClick={(e) => { e.preventDefault(); scrollToSection('project'); }}>
-            <div style={imageBoxStyle} className="image-box">
-              <img src="../public/jacyzlogo.png" alt="Collaboration 1" style={imageStyle} />
+        <div style={imageContainerStyle} className='image-container'>
+          <a
+            href='#project'
+            onClick={e => {
+              e.preventDefault();
+              scrollToSection('project');
+            }}
+          >
+            <div style={imageBoxStyle} className='image-box'>
+              <img src='/jacyz-logo.svg' alt='Collaboration 1' style={imageStyle} />
             </div>
           </a>
-          <a href="#project" onClick={(e) => { e.preventDefault(); scrollToSection('project'); }}>
-            <div style={imageBoxStyle} className="image-box">
-              <img
-                src="https://i.pinimg.com/736x/a2/4b/d0/a24bd06484f40c317ca0aed6416c4fd3.jpg"
-                alt="Collaboration 2"
-                style={imageStyle}
-              />
+          <a
+            href='#project'
+            onClick={e => {
+              e.preventDefault();
+              scrollToSection('project');
+            }}
+          >
+            <div style={imageBoxStyle} className='image-box'>
+              <img src='/mcdonalds-logo.svg' alt='Collaboration 2' style={imageStyle} />
             </div>
           </a>
-          <a href="#project" onClick={(e) => { e.preventDefault(); scrollToSection('project'); }}>
-            <div style={imageBoxStyle} className="image-box">
-              <img
-                src="https://w7.pngwing.com/pngs/916/115/png-transparent-volvo-logo-volvo-cars-ab-volvo-logo-pga-tour-volvo-car-logo-brand-company-text-trademark.png"
-                alt="Collaboration 3"
-                style={imageStyle}
-              />
+          <a
+            href='#project'
+            onClick={e => {
+              e.preventDefault();
+              scrollToSection('project');
+            }}
+          >
+            <div style={imageBoxStyle} className='image-box'>
+              <img src='/volvo-logo.svg' alt='Collaboration 3' style={imageStyle} />
             </div>
           </a>
         </div>
