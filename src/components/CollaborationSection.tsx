@@ -8,7 +8,7 @@ function CollaborationSection() {
     }
   };
 
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 634);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,13 +40,22 @@ function CollaborationSection() {
   };
 
   const imageBoxStyle: React.CSSProperties = {
-    width: '200px',
-    height: '200px',
-    marginBottom: '20px',
+    width: '140px',
+    height: '140px',
+    marginLeft: '30px',
+    marginRight: '30px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
+  };
+
+  const jacyzBoxStyle: React.CSSProperties = {
+    ...imageBoxStyle,
+    width: '200px',
+    height: '140px',
+    marginLeft: '0px',
+    marginRight: '0px',
   };
 
   const imageStyle: React.CSSProperties = {
@@ -66,7 +75,7 @@ function CollaborationSection() {
               scrollToSection('project');
             }}
           >
-            <div style={imageBoxStyle} className='image-box'>
+            <div style={jacyzBoxStyle} className='image-box'>
               <img src='/jacyz-logo.svg' alt='Collaboration 1' style={imageStyle} />
             </div>
           </a>
