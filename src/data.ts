@@ -4,7 +4,7 @@ export const coworkers = [
     fullName: 'Daniel Vanpalo',
     imgUrl: '/daniel.jpg',
     expertise: 'Frontend-utvecklare',
-    phone: '0730-55 66 77',
+    phone: '0730-55 66 78',
     email: 'daniel@eldsit.se',
     techStack: ['/react-icon.svg', '/angular-icon.svg', '/typescript-icon.svg', '/nodejs-icon.svg'],
     shortBio:
@@ -20,9 +20,9 @@ export const coworkers = [
     fullName: 'Emil Helgesson',
     imgUrl: '/emil.jpg',
     expertise: 'Frontend-utvecklare',
-    phone: '0730-55 66 77',
+    phone: '0730-55 66 76',
     email: 'emil@eldsit.se',
-    techStack: ['/react-icon.svg', '/vue-icon.svg', '/typescript-icon.svg', '/nodemon-icon.svg'],
+    techStack: ['/vue-icon.svg','/react-icon.svg', '/typescript-icon.svg', '/nodemon-icon.svg'],
     shortBio:
       'Frontend-superstar med sinne för effektiv kodning med smarta  lösningar och passion för tillgänglighet till internet för alla samt gillar Bitcoin.',
     bio: `Emil Helgesson är den passionerade och skickliga frontend-utvecklaren som tar våra digitala visioner och omsätter dem till visuella mästerverk.
@@ -36,7 +36,7 @@ export const coworkers = [
     fullName: 'Simon Bengtsson',
     imgUrl: '/simon.jpg',
     expertise: 'Backend-utvecklare',
-    phone: '0730-55 66 77',
+    phone: '0730-55 66 70',
     email: 'simon@eldsit.se',
     techStack: ['/react-icon.svg', '/php-icon.svg', '/java-icon.svg', '/c-sharp-icon.svg'],
     shortBio:
@@ -52,7 +52,7 @@ export const coworkers = [
     fullName: 'Linus Hernvall',
     imgUrl: '/linus.jpg',
     expertise: 'Backend-utvecklare',
-    phone: '0730-55 66 77',
+    phone: '0730-55 66 74',
     email: 'linus@eldsit.se',
     techStack: ['/python-icon.svg', '/nodejs-icon.svg', '/ruby-icon.svg', '/photoshop-icon.svg'],
     shortBio: 'Backend-fantom med läggning åt problemlösningar och ett stort hjärta för livemusik.',
@@ -67,7 +67,7 @@ export const coworkers = [
     fullName: 'Lucas Alfredsson',
     imgUrl: '/lucas.jpg',
     expertise: 'UX-designer',
-    phone: '0730-55 66 77',
+    phone: '0730-55 66 71',
     email: 'lucas@eldsit.se',
     techStack: ['/photoshop-icon.svg', '/figma-icon.svg', '/react-icon.svg', '/bootstrap-icon.svg'],
     shortBio:
