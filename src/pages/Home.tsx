@@ -48,13 +48,13 @@ function Home() {
       <div id='process'>
         <ProcessSection />
       </div>
-      <TechStack />
       <div id='project'>
         <ProjectCarousel />
       </div>
       <div id='team'>
         <CoworkerSection />
       </div>
+      <TechStack />
       <div id='contact'>
         <ContactSection />
       </div>
