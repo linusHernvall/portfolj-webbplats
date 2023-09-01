@@ -1,25 +1,33 @@
+import { useMediaQuery } from '@mantine/hooks';
 import { NavLink } from 'react-router-dom';
 import { coworkers } from '../data';
 import CoworkerCard from './CoworkerCard';
+import { Title } from '@mantine/core';
 
 function CoworkerSection() {
   // CSS ------------------------------------------------------------------------
 
   // Variabler / Functions ------------------------------------------------------
 
+  const matches = useMediaQuery('(min-width: 1104px)');
   // TSX ------------------------------------------------------------------------
   return (
     <div>
       <div>
         <div style={{ textAlign: 'center' }}>
-          <h2>VÅRT TEAM</h2>
+          <Title m="50px 0 10px" order={2}>VÅRT TEAM</Title>
         </div>
         <ul
           style={{
             display: 'flex',
-            flexDirection: 'row',
+            margin: '0 auto',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: matches ? 'row' : 'column',
             flexWrap: 'wrap',
+            gap: matches ? '0px' : '30px',
             listStyleType: 'none',
+            maxWidth: '1080px',
           }}
         >
           {coworkers.map(coworker => (
