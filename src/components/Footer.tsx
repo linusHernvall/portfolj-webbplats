@@ -1,13 +1,62 @@
-import { ActionIcon, Group, Text } from '@mantine/core';
+import { ActionIcon, Box, Group, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { BrandFacebook, BrandInstagram, BrandYoutube } from 'tabler-icons-react';
 
 function Footer() {
-  // CSS ------------------------------------------------------------------------
-
   // Variabler / Functions ------------------------------------------------------
   const matches = useMediaQuery('(min-width: 48em)');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        scrollIfHomePage(hash);
+      }
+    }
+  }, [location.pathname]);
+
+  // Scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollIfHomePage = (id: string) => {
+    const sectionElement = document.getElementById(id);
+
+    if (sectionElement) {
+      const position = sectionElement.offsetTop - 66;
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const isHomePage = location.pathname === '/';
+
+  // Check if we're already on the homepage
+  const scrollToSection = (id: string) => {
+    if (isHomePage) {
+      scrollIfHomePage(id);
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
+
+  // This effect runs whenever the component mounts, ensuring it scrolls to the correct section if needed
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      scrollIfHomePage(hash);
+    }
+  }, []);
   // TSX ------------------------------------------------------------------------
   return (
     <footer
@@ -25,7 +74,13 @@ function Footer() {
           justifyContent: matches ? 'space-between' : 'center',
         }}
       >
-        <img style={{ height: '4rem' }} src='/public/logo-lil-flame.png' alt="ELD'S IT logotype" />
+        <NavLink onClick={scrollToTop} to='/'>
+          <img
+            style={{ height: '4rem' }}
+            src='/public/logo-lil-flame.png'
+            alt="ELD'S IT logotype"
+          />
+        </NavLink>
         <Group
           sx={{
             display: 'flex',
@@ -41,39 +96,42 @@ function Footer() {
               alignItems: matches ? 'flex-start' : 'center',
             }}
           >
-            <NavLink
-              to=''
+            <Box
+              onClick={() => scrollToSection('team')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 VÅRT TEAM
               </Text>
-            </NavLink>
-            <NavLink
-              to=''
+            </Box>
+            <Box
+              onClick={() => scrollToSection('contact')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 KONTAKTA OSS
               </Text>
-            </NavLink>
-            <NavLink
-              to=''
+            </Box>
+            <Box
+              onClick={() => scrollToSection('about')}
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               <Text size='12px' fw={700}>
                 OM OSS
               </Text>
-            </NavLink>
+            </Box>
           </Group>
           <Group pb={matches ? '0rem' : '1rem'}>
             <ActionIcon size={matches ? 'xl' : 'lg'} variant='default' radius='xl'>
