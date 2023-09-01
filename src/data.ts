@@ -2,7 +2,7 @@ export const coworkers = [
   {
     id: 1,
     fullName: "Daniel Vanpalo",
-    imgUrl: "",
+    imgUrl: "/daniel.jpg",
     expertise: "Frontend-utvecklare",
     phone: "0730-55 66 77",
     email: "daniel@eldsit.se",
@@ -11,7 +11,7 @@ export const coworkers = [
   {
     id: 2,
     fullName: "Emil Helgesson",
-    imgUrl: "",
+    imgUrl: "/emil.jpg",
     expertise: "Frontend-utvecklare",
     phone: "0730-55 66 77",
     email: "emil@eldsit.se",
@@ -20,7 +20,7 @@ export const coworkers = [
   {
     id: 3,
     fullName: "Simon Bengtsson",
-    imgUrl: "",
+    imgUrl: "simon.jpg",
     expertise: "Backend-utvecklare",
     phone: "0730-55 66 77",
     email: "simon@eldsit.se",
@@ -29,7 +29,7 @@ export const coworkers = [
   {
     id: 4,
     fullName: "Linus Hernvall",
-    imgUrl: "",
+    imgUrl: "linus.jpg",
     expertise: "Backend-utvecklare",
     phone: "0730-55 66 77",
     email: "linus@eldsit.se",
@@ -38,7 +38,7 @@ export const coworkers = [
   {
     id: 5,
     fullName: "Lucas Alfredsson",
-    imgUrl: "",
+    imgUrl: "lucas.jpg",
     expertise: "UX-designer",
     phone: "0730-55 66 77",
     email: "lucas@eldsit.se",
