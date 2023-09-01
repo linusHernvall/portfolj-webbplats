@@ -1,35 +1,38 @@
-import { NavLink } from "react-router-dom";
-import { coworkers } from "../data";
-import CoworkerCard from "./CoworkerCard";
+import { NavLink } from 'react-router-dom';
+import { coworkers } from '../data';
+import CoworkerCard from './CoworkerCard';
 
 function CoworkerSection() {
-  
-    // CSS ------------------------------------------------------------------------
+  // CSS ------------------------------------------------------------------------
 
+  // Variabler / Functions ------------------------------------------------------
 
-    // Variabler / Functions ------------------------------------------------------
-  
-  
-    // TSX ------------------------------------------------------------------------
+  // TSX ------------------------------------------------------------------------
   return (
     <div>
       <div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ textAlign: 'center' }}>
           <h2>VÅRT TEAM</h2>
         </div>
-        <ul>
-          {coworkers.map((coworker) => (
+        <ul
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            listStyleType: 'none',
+          }}
+        >
+          {coworkers.map(coworker => (
             <li key={coworker.id}>
               <NavLink
                 to={`/coworker/${coworker.id}`}
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: 'none', color: 'black' }}
               >
                 <CoworkerCard
+                  img={coworker.imgUrl}
                   name={coworker.fullName}
                   expertise={coworker.expertise}
-                  bio={coworker.bio}
-                  phone={coworker.phone}
-                  email={coworker.email}
+                  shortBio={coworker.shortBio}
                 />
               </NavLink>
             </li>
