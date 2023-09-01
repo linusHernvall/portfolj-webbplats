@@ -1,0 +1,47 @@
+.collaboration-images {
+    background-color: #F7F9FC;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .image-box {
+    width: 200px; /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    margin-bottom: 20px; /* Adjust spacing between images */
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust the media query to target screens smaller than 634px */
+  @media (max-width: 634px) {
+    .image-container {
+      flex-direction: column; /* Display images in a column on smaller screens */
+      align-items: center; /* Adjust alignment for column layout */
+    }
+    
+    .image-box {
+      width: 100%; /* Set images to full width of the container */
+      max-width: 200px; /* Set a maximum width for consistency */
+    }
+  }
+  
