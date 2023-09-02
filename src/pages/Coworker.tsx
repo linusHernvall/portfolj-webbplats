@@ -35,41 +35,72 @@ function Coworker() {
             // height: '100vh',
           }}
         ></Box>
-        <Box p='0 0 0 15px' sx={{ minHeight: '100vh', width: matches ? '70%' : '100%' }}>
-          <Box m='5rem 0 0 0' sx={{ width: '200px', borderRadius: '99999rem', overflow: 'hidden' }}>
-            <img
-              style={{ width: '100%', height: '100%' }}
-              src={coworker.imgUrl}
-              alt='En av våra konsult medarbetare, bild på ansiktet.'
-            />
-          </Box>
-          <Title fw={700} order={2}>
-            {coworker.fullName}
-          </Title>
-          <Title mb={15} order={4}>
-            {coworker.expertise}
-          </Title>
-          <Title
-            dangerouslySetInnerHTML={{ __html: coworker.bio.replace(/\n/g, '<br/>') }}
-            fz='12px'
-            sx={{ maxWidth: '600px' }}
-          ></Title>
-
-          <Box m='1rem 0 1rem' sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <Box>
-              <img style={{ width: '40px', marginRight: "0.5rem" }} src='/phone.png' alt='Phone' />
-              <span>{coworker.phone}</span>
+        {/* MOBILE - FULLNAME BOX ---------------------------------------- */}
+        <Box sx={{ minHeight: '100vh', width: matches ? '70%' : '100%' }}>
+          <Box
+            p='0 0 0 15px'
+            sx={{
+              backgroundImage: matches ? 'none' : 'url("/individuell-person-bg.png")',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+            }}
+          >
+            <Box
+              mt={matches ? '5rem' : '0rem'}
+              pt={matches ? '0rem' : '5rem'}
+              sx={{ width: '200px', overflow: 'hidden' }}
+            >
+              <img
+                style={{ width: '100%', borderRadius: '9999rem', height: '100%' }}
+                src={coworker.imgUrl}
+                alt='En av våra konsult medarbetare, bild på ansiktet.'
+              />
             </Box>
-            <Box>
-              <img style={{ width: '40px', marginRight: '.5rem' }} src='/email.png' alt='Mail' />
-              <span>{coworker.email}</span>
-            </Box>
+            <Title
+              sx={{
+                textShadow: 'white -2px -2px 4px',
+                position: 'relative',
+                top: matches ? '0px' : '20px',
+              }}
+              fw={700}
+              order={2}
+            >
+              {coworker.fullName}
+            </Title>
           </Box>
 
-          <Box sx={{ display: 'flex', gap: '1rem' }}>
-            {coworker.techStack.map((tech, index) => (
-              <img height={50} key={index} src={tech} alt={tech} />
-            ))}
+          {/* EXPERTISE, CONTACT, TECHSTACK BOX ---------------------------------------- */}
+          <Box p='0 0 0 15px'>
+            <Title mt={matches ? 0 : 15} mb={15} order={4}>
+              {coworker.expertise}
+            </Title>
+            <Title
+              dangerouslySetInnerHTML={{ __html: coworker.bio.replace(/\n/g, '<br/>') }}
+              fz='12px'
+              sx={{ maxWidth: '600px' }}
+            ></Title>
+
+            <Box m='1rem 0 1rem' sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <Box>
+                <img
+                  style={{ width: '40px', marginRight: '0.5rem' }}
+                  src='/phone.png'
+                  alt='Phone'
+                />
+                <span>{coworker.phone}</span>
+              </Box>
+              <Box>
+                <img style={{ width: '40px', marginRight: '.5rem' }} src='/email.png' alt='Mail' />
+                <span>{coworker.email}</span>
+              </Box>
+            </Box>
+
+            <Box sx={{ display: 'flex', gap: '1rem' }}>
+              {coworker.techStack.map((tech, index) => (
+                <img height={50} key={index} src={tech} alt={tech} />
+              ))}
+            </Box>
           </Box>
         </Box>
       </Box>
