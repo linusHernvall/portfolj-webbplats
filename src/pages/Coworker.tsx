@@ -24,6 +24,7 @@ function Coworker() {
   return (
     <>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        {/* LEFT SECTION IMAGE DESKTOP ---------------------------------------------------------- */}
         <Box
           sx={{
             display: matches ? 'block' : 'none',
@@ -35,8 +36,27 @@ function Coworker() {
             // height: '100vh',
           }}
         ></Box>
-        {/* MOBILE - FULLNAME BOX ---------------------------------------- */}
-        <Box sx={{ minHeight: '100vh', width: matches ? '70%' : '100%' }}>
+        {/* RIGHT SECTION DESKTOP ----------------------------------------------------- */}
+        <Box
+          sx={{
+            minHeight: '100vh',
+            width: matches ? '70%' : '100%',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          {/* BLUE BALLS ----------------------------------------------------- */}
+          <img
+            style={{ position: 'absolute', zIndex: -10, top: -300, left: 0 }}
+            src='/blue-ball.png'
+            alt='A blue circle ball'
+          />
+          <img
+            style={{ position: 'absolute', zIndex: -10, bottom: -300, right: -250 }}
+            src='/blue-ball.png'
+            alt='A blue circle ball'
+          />
+          {/* MOBILE - FULLNAME BOX ---------------------------------------------------- */}
           <Box
             p='0 0 0 15px'
             sx={{
@@ -96,7 +116,7 @@ function Coworker() {
               </Box>
             </Box>
 
-            <Box sx={{ display: 'flex', gap: '1rem' }}>
+            <Box sx={{ display: 'flex', gap: '1rem', paddingBottom: "1rem" }}>
               {coworker.techStack.map((tech, index) => (
                 <img height={50} key={index} src={tech} alt={tech} />
               ))}
