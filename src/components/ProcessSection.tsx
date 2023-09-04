@@ -41,18 +41,18 @@ function ProcessSection() {
 
     gsap.to('.blueball', {
       // x: 150,
-      y: 1750,
+      y: 2450,
       // duration: 8,
       scrollTrigger: {
         trigger: '.process-section',
-        start: '15% 60%',
-        end: 'bottom 10%',
+        start: '45% 70%',
+        end: 'bottom 0%',
         scrub: 1,
         // pin: true,
         // toggleActions: "restart none none none",
         //options: play, pause, resume, reset, restart, complete, reverse, none
         //OnEnter, OnLeave, OnEnterBack, OnLeaveBack
-        // markers: true,
+        markers: true,
       },
     });
   }, []);
@@ -62,7 +62,7 @@ function ProcessSection() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box className='process-section'>
+      <Box sx={{overflow:"hidden"}} className='process-section'>
         <Box
           className={classes.processSection}
           sx={{
