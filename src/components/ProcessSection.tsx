@@ -67,7 +67,7 @@ function ProcessSection() {
       {/* DESIGN SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ width: '100%', order: matches ? 2 : 0 }}>
-          <Title p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Design
           </Title>
           <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
@@ -118,7 +118,7 @@ function ProcessSection() {
       {/* UTVECKLING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ width: '100%' }}>
-          <Title p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Utveckling
           </Title>
           <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
@@ -172,7 +172,7 @@ function ProcessSection() {
       {/* LANSERING SECTION----------------------------------------------------------------------------- */}
       <Box className={classes.processSections}>
         <Box sx={{ width: '100%', order: matches ? 2 : 0 }}>
-          <Title p='20px 0' ta='center'>
+          <Title order={2} p='20px 0' ta='center'>
             Lansering
           </Title>
           <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>

@@ -13,7 +13,6 @@ function AboutSection() {
       <Box
         sx={{
           display: 'flex',
-          marginTop: '1rem',
           marginBottom: '1rem',
           flexDirection: 'column',
           alignItems: 'center',
