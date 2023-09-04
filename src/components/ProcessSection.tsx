@@ -52,7 +52,7 @@ function ProcessSection() {
         // toggleActions: "restart none none none",
         //options: play, pause, resume, reset, restart, complete, reverse, none
         //OnEnter, OnLeave, OnEnterBack, OnLeaveBack
-        markers: true,
+        // markers: true,
       },
     });
   }, []);
