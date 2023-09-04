@@ -75,11 +75,7 @@ function Footer() {
         }}
       >
         <NavLink onClick={scrollToTop} to='/'>
-          <img
-            style={{ height: '4rem' }}
-            src='/public/logo-lil-flame.png'
-            alt="ELD'S IT logotype"
-          />
+          <img style={{ height: '4rem' }} src='/logo-lil-flame.png' alt="ELD'S IT logotype" />
         </NavLink>
         <Group
           sx={{

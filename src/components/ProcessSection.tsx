@@ -161,10 +161,11 @@ function ProcessSection() {
           sx={{
             width: '100%',
             height: matches ? 'none' : '55vh',
-            backgroundImage: 'url("utveckling.png")',
+            backgroundImage: 'url("developer.jpeg")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
+            transform: 'rotateY(180deg)',
           }}
         ></Box>
       </Box>
@@ -214,10 +215,11 @@ function ProcessSection() {
           sx={{
             width: '100%',
             height: matches ? 'none' : '55vh',
-            backgroundImage: 'url("lansering.png")',
+            backgroundImage: 'url("deployment.jpeg")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
+            transform: 'rotateY(180deg)',
           }}
         ></Box>
       </Box>

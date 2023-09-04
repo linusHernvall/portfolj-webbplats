@@ -1,5 +1,5 @@
+import { Box, Button, Col, Container, Grid, TextInput, Textarea, Title } from '@mantine/core';
 import React, { useState } from 'react';
-import { Container, Col, Grid, TextInput, Textarea, Button } from '@mantine/core';
 
 function ContactSection() {
   const [name, setName] = useState('');
@@ -27,15 +27,20 @@ function ContactSection() {
   return (
     <div style={{ backgroundColor: '#1864AB', paddingTop: '50px', paddingBottom: '50px' }}>
       <Container>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Title order={2} color='white' mb={'1rem'}>
+            KONTAKTA OSS
+          </Title>
+        </Box>
         <Grid gutter='lg'>
           <Col span={12}>
             <form onSubmit={handleFormSubmit}>
               <TextInput
                 required
-                label={name && !name.trim() && !emailSent ? 'Name' : undefined}
+                label={name && !name.trim() && !emailSent ? 'Namn' : undefined}
                 value={name}
                 onChange={event => setName(event.currentTarget.value)}
-                placeholder='Name'
+                placeholder='Namn'
                 style={{ marginBottom: '15px' }}
               />
               <TextInput
@@ -52,7 +57,7 @@ function ContactSection() {
                 label={description && !description.trim() && !emailSent ? 'Description' : undefined}
                 value={description}
                 onChange={event => setDescription(event.currentTarget.value)}
-                placeholder='Description'
+                placeholder='Beskriv ärendet...'
                 style={{ marginBottom: '15px' }}
               />
               <Button
@@ -68,11 +73,20 @@ function ContactSection() {
                   margin: '0 auto',
                 }}
               >
-                {isSubmitting ? 'Sending...' : 'Send'}
+                {isSubmitting ? 'Skickar...' : 'Skicka'}
               </Button>
             </form>
             {emailSent && (
-              <div style={{ marginTop: '15px', color: 'white' }}>Your email has been sent!</div>
+              <div
+                style={{
+                  marginTop: '15px',
+                  color: 'white',
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
+                Ditt meddelande har skickats!
+              </div>
             )}
           </Col>
         </Grid>

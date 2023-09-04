@@ -46,13 +46,6 @@ function BurgerMenuLinks({
     }
   };
 
-  // This effect runs whenever the component mounts, ensuring it scrolls to the correct section if needed
-  // useEffect(() => {
-  //   const hash = window.location.hash.substring(1);
-  //   if (hash) {
-  //     scrollIfHomePage(hash);
-  //   }
-  // }, []);
   useEffect(() => {
     if (location.pathname === '/') {
       const hash = window.location.hash.substring(1);
@@ -100,7 +93,7 @@ function BurgerMenuLinks({
               color='#FFFFFF'
             >
               {' '}
-              Process
+              Enhetlig Process
             </Title>
           </li>
           <li onClick={() => scrollToSection('project')}>
@@ -115,7 +108,7 @@ function BurgerMenuLinks({
               color='#FFFFFF'
             >
               {' '}
-              Projekt
+              Tidigare Projekt
             </Title>
           </li>
           <li onClick={() => scrollToSection('team')}>
@@ -130,7 +123,7 @@ function BurgerMenuLinks({
               color='#FFFFFF'
             >
               {' '}
-              Teamet
+              Vårt Team
             </Title>
           </li>
           <li onClick={() => scrollToSection('contact')}>
@@ -145,7 +138,7 @@ function BurgerMenuLinks({
               color='#FFFFFF'
             >
               {' '}
-              Kontakta
+              Kontakta Oss
             </Title>
           </li>
           <li onClick={() => scrollToSection('about')}>
@@ -160,7 +153,7 @@ function BurgerMenuLinks({
               color='#FFFFFF'
             >
               {' '}
-              Om oss
+              Om Oss
             </Title>
           </li>
           <li onClick={() => scrollToSection('map')}>
