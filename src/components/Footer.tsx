@@ -46,7 +46,8 @@ function Footer() {
     if (isHomePage) {
       scrollIfHomePage(id);
     } else {
-      navigate(`/#${id}`);
+      navigate(`/`);
+      setTimeout(() => scrollIfHomePage(id), 100);
     }
   };
 

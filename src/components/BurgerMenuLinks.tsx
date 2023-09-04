@@ -42,7 +42,8 @@ function BurgerMenuLinks({
       scrollIfHomePage(id);
     } else {
       // Navigate to the homepage and append the hash for the section
-      navigate(`/#${id}`);
+      navigate(`/`);
+      setTimeout(() => scrollIfHomePage(id), 100);
     }
   };
 
