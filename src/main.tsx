@@ -28,9 +28,8 @@ export function Root() {
     <React.StrictMode>
       <MantineProvider
         theme={{
+          fontFamily: 'Inter, sans-serif',
           headings: {
-            fontFamily: 'Inter, sans-serif',
-
             sizes: {
               h1: { fontSize: '42px' },
               h2: { fontSize: '32px', fontWeight: 100 },

@@ -1,35 +1,46 @@
-import { NavLink } from "react-router-dom";
-import { coworkers } from "../data";
-import CoworkerCard from "./CoworkerCard";
+import { useMediaQuery } from '@mantine/hooks';
+import { NavLink } from 'react-router-dom';
+import { coworkers } from '../data';
+import CoworkerCard from './CoworkerCard';
+import { Title } from '@mantine/core';
 
 function CoworkerSection() {
-  
-    // CSS ------------------------------------------------------------------------
+  // CSS ------------------------------------------------------------------------
 
+  // Variabler / Functions ------------------------------------------------------
 
-    // Variabler / Functions ------------------------------------------------------
-  
-  
-    // TSX ------------------------------------------------------------------------
+  const matches = useMediaQuery('(min-width: 1104px)');
+  // TSX ------------------------------------------------------------------------
   return (
     <div>
       <div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <h2>VÅRT TEAM</h2>
+        <div style={{ textAlign: 'center' }}>
+          <Title m="50px 0 10px" order={2}>VÅRT TEAM</Title>
         </div>
-        <ul>
-          {coworkers.map((coworker) => (
+        <ul
+          style={{
+            display: 'flex',
+            margin: '0 auto',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: matches ? 'row' : 'column',
+            flexWrap: 'wrap',
+            gap: matches ? '0px' : '30px',
+            listStyleType: 'none',
+            maxWidth: '1080px',
+          }}
+        >
+          {coworkers.map(coworker => (
             <li key={coworker.id}>
               <NavLink
                 to={`/coworker/${coworker.id}`}
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: 'none', color: 'black' }}
               >
                 <CoworkerCard
+                  img={coworker.imgUrl}
                   name={coworker.fullName}
                   expertise={coworker.expertise}
-                  bio={coworker.bio}
-                  phone={coworker.phone}
-                  email={coworker.email}
+                  shortBio={coworker.shortBio}
                 />
               </NavLink>
             </li>
