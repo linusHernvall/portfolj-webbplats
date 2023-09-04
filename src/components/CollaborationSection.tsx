@@ -2,6 +2,8 @@ import { Title } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 
 function CollaborationSection() {
+  
+  // Variabler / Functions ------------------------------------------------------
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -21,6 +23,9 @@ function CollaborationSection() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  
+  // CSS ------------------------------------------------------------------------
 
   const containerStyle: React.CSSProperties = {
     backgroundColor: '#FFFFFF',
@@ -65,7 +70,7 @@ function CollaborationSection() {
     width: '100%',
     height: '100%',
   };
-
+  // TSX ------------------------------------------------------------------------
   return (
     <div style={containerStyle} className='collaboration-images'>
       <div className='container'>

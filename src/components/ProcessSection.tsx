@@ -1,5 +1,7 @@
 import { Box, Text, Title, createStyles } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
 
 function ProcessSection() {
   // CSS ------------------------------------------------------------------------
@@ -9,7 +11,7 @@ function ProcessSection() {
   const useStyles = createStyles(theme => ({
     processSection: {
       height: '35vh',
-      [theme.fn.largerThan('md')]: {
+      [theme.fn.largerThan('64em')]: {
         height: '50vh',
       },
     },
@@ -17,13 +19,13 @@ function ProcessSection() {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      [theme.fn.largerThan('md')]: {
+      [theme.fn.largerThan('64em')]: {
         flexDirection: 'row',
       },
     },
     processDesignTextDiv: {
       padding: '20px',
-      [theme.fn.largerThan('md')]: {
+      [theme.fn.largerThan('64em')]: {
         width: '50%',
       },
     },
@@ -31,6 +33,46 @@ function ProcessSection() {
 
   const { classes } = useStyles();
   const matches = useMediaQuery('(min-width: 64em)');
+
+  // BLUE BALL ANIMATION -------------------------------------------------------------------
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.enhetlig-process-heading', {
+      x: -1900, // Negative value to move from right to left
+      duration: 1.5,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.process-top-section',
+        start: 'top center',
+        end: 'bottom top',
+        // scrub: 1,
+        // pin: true,
+        toggleActions: 'play reset none none',
+        //OnEnter, OnLeave, OnEnterBack, OnLeaveBack
+        //options: play, pause, resume, reset, restart, complete, reverse, none
+        // markers: true,
+      },
+    });
+
+    gsap.to('.blueball', {
+      // x: 150,
+      y: 2450,
+      // duration: 8,
+      scrollTrigger: {
+        trigger: '.process-section',
+        start: '45% 70%',
+        end: 'bottom 0%',
+        scrub: 1,
+        // pin: true,
+        // toggleActions: "restart none none none",
+        //options: play, pause, resume, reset, restart, complete, reverse, none
+        //OnEnter, OnLeave, OnEnterBack, OnLeaveBack
+        // markers: true,
+      },
+    });
+  }, []);
 
   // TSX ------------------------------------------------------------------------
   return (
