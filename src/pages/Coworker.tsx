@@ -1,10 +1,25 @@
 import { Box, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { coworkers } from '../data';
 
 function Coworker() {
   // CSS ------------------------------------------------------------------------
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  const hoverRotateStyles = {
+    transform: isHovered ? 'rotate(360deg)' : 'none',
+    transition: 'transform 0.5s ease',
+  };
 
   // Variabler / Functions ------------------------------------------------------
   const { id } = useParams<{ id: string | undefined }>();
@@ -109,7 +124,15 @@ function Coworker() {
 
             <Box sx={{ display: 'flex', gap: '1rem', paddingBottom: '1rem' }}>
               {coworker.techStack.map((tech, index) => (
-                <img height={50} key={index} src={tech} alt={tech} />
+                <img
+                  style={hoverRotateStyles}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  height={50}
+                  key={index}
+                  src={tech}
+                  alt={tech}
+                />
               ))}
             </Box>
           </Box>
