@@ -20,7 +20,6 @@ function CoworkerCard(props: { img: string; name: string; expertise: string; sho
       m={matches ? '30px' : '0px'}
       sx={theme => ({
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        // flexBasis: `calc(33.33% - 10px)`, 
       })}
     >
       <Avatar src={img} size={120} radius={120} mx='auto' />
