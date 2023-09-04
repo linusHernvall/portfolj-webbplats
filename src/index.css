@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .collaboration-images {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collaboration-images a {
+    margin-bottom: 20px; /* Adjust spacing between images */
+  }
+}
