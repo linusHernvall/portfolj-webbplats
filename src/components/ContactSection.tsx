@@ -28,7 +28,7 @@ function ContactSection() {
     <div style={{ backgroundColor: '#1864AB', paddingTop: '50px', paddingBottom: '50px' }}>
       <Container>
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Title order={2} color='white' mb={'1rem'}>
+          <Title order={2} color='white' mb={'10px'}>
             KONTAKTA OSS
           </Title>
         </Box>

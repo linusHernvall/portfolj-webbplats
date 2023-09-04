@@ -18,7 +18,7 @@ function AboutSection() {
           alignItems: 'center',
         }}
       >
-        <Title order={2} style={{ margin: '50px 0 16px' }}>
+        <Title order={2} style={{ margin: '50px 0 10px' }}>
           OM OSS
         </Title>
         <Box
