@@ -81,11 +81,7 @@ function Header() {
           }}
         >
           <NavLink onClick={scrollToTop} to='/'>
-            <img
-              style={{ height: '2rem' }}
-              src='/public/logo-lil-flame.png'
-              alt="ELD'S IT logotype"
-            />
+            <img style={{ height: '2rem' }} src='/logo-lil-flame.png' alt="ELD'S IT logotype" />
           </NavLink>
           <BurgerMenu toggleMenu={toggleBurgerMenu} isOpen={isBurgerMenuOpen} />
         </Box>

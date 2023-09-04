@@ -1,3 +1,4 @@
+import { Title } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 
 function CollaborationSection() {
@@ -73,7 +74,9 @@ function CollaborationSection() {
   return (
     <div style={containerStyle} className='collaboration-images'>
       <div className='container'>
-        <h2 style={headingStyle}>SAMARBETSPARTNERS</h2>
+        <Title order={2} style={headingStyle}>
+          SAMARBETSPARTNERS
+        </Title>
         <div style={imageContainerStyle} className='image-container'>
           <a
             href='#project'

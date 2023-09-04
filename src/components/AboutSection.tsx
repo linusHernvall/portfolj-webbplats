@@ -13,13 +13,12 @@ function AboutSection() {
       <Box
         sx={{
           display: 'flex',
-          marginTop: '1rem',
           marginBottom: '1rem',
           flexDirection: 'column',
           alignItems: 'center',
         }}
       >
-        <Title order={2} style={{ marginBottom: '1rem' }}>
+        <Title order={2} style={{ margin: '50px 0 10px' }}>
           OM OSS
         </Title>
         <Box

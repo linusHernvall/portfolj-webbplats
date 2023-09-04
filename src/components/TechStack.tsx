@@ -8,7 +8,7 @@ function TechStack() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Marquee speed={25} autoFill>
+      <Marquee style={{ margin: '1rem 0' }} speed={25} autoFill>
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/html-icon.svg' />
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/css-icon.svg' />
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/javascript-icon.svg' />

@@ -1,8 +1,8 @@
+import { Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { NavLink } from 'react-router-dom';
 import { coworkers } from '../data';
 import CoworkerCard from './CoworkerCard';
-import { Title } from '@mantine/core';
 
 function CoworkerSection() {
   // CSS ------------------------------------------------------------------------
@@ -15,7 +15,9 @@ function CoworkerSection() {
     <div>
       <div>
         <div style={{ textAlign: 'center' }}>
-          <Title m="50px 0 10px" order={2}>VÅRT TEAM</Title>
+          <Title m={matches ? '50px 0 -20px' : '50px 0 10px'} order={2}>
+            VÅRT TEAM
+          </Title>
         </div>
         <ul
           style={{
