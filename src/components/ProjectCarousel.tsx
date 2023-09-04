@@ -5,10 +5,6 @@ import mcdonalds from '/mcdonalds.jpg';
 import volvo from '/volvo.jpg';
 
 function ProjectCarousel() {
-  // const isSmallScreen = useMediaQuery({ maxWidth: 576 });
-  // const isMediumScreen = useMediaQuery({ minWidth: 577, maxWidth: 768 });
-  // const isLargeScreen = useMediaQuery({ minWidth: 769, maxWidth: 992 });
-
   return (
     <>
       <Carousel
