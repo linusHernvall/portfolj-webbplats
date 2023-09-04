@@ -27,6 +27,7 @@ function TechStack() {
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/photoshop-icon.svg' />
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/vite-icon.svg' />
         <img height='40px' style={{ marginRight: '2.3rem' }} src='/cypress-icon.svg' />
+        <img height='40px' style={{ marginRight: '2.3rem' }} src='/react-icon.svg' />
       </Marquee>
     </>
   );
