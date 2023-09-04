@@ -10,11 +10,11 @@ function App() {
       <Header />
       <main>
         <ScrollToTop />
-        <Container maw={'1980px'} p={0}>
+        <Container maw={'1920px'} p={0}>
           <Outlet />
         </Container>
       </main>
-
+      
       <Footer />
     </>
   );
