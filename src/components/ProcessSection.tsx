@@ -39,6 +39,23 @@ function ProcessSection() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    gsap.to('.enhetlig-process-heading', {
+      x: -1900, // Negative value to move from right to left
+      duration: 1.5,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.process-top-section',
+        start: 'top center',
+        end: 'bottom top',
+        // scrub: 1,
+        // pin: true,
+        toggleActions: 'play reset none none',
+        //OnEnter, OnLeave, OnEnterBack, OnLeaveBack
+        //options: play, pause, resume, reset, restart, complete, reverse, none
+        markers: true,
+      },
+    });
+
     gsap.to('.blueball', {
       // x: 150,
       y: 2450,
@@ -62,9 +79,9 @@ function ProcessSection() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Box sx={{overflow:"hidden"}} className='process-section'>
+      <Box sx={{ overflow: 'hidden' }} className='process-section'>
         <Box
-          className={classes.processSection}
+          className={`${classes.processSection} process-top-section`}
           sx={{
             backgroundImage: 'url("enhetlig-process.png")',
             backgroundRepeat: 'no-repeat',
@@ -72,25 +89,18 @@ function ProcessSection() {
             backgroundPosition: '30% center',
           }}
         >
-          {matches ? (
-            <Title fz='96px' p='40px 0 0 30px' c='white'>
-              ENHETLIG
-            </Title>
-          ) : (
-            <Title order={1} p='40px 0 0 30px' c='white'>
-              ENHETLIG
-            </Title>
-          )}
-
-          {matches ? (
-            <Title fz='96px' p='0 0 0 30px' c='white'>
-              PROCESS
-            </Title>
-          ) : (
-            <Title order={1} p='0 0 0 30px' c='white'>
-              PROCESS
-            </Title>
-          )}
+          {/* TITLE BOX.. */}
+          <Box sx={{opacity:"0%", position: 'relative', left: '1900px' }} className='enhetlig-process-heading'>
+            {matches ? (
+              <Title fz='96px' p='40px 0 0 30px' c='white'>
+                ENHETLIG <br /> PROCESS
+              </Title>
+            ) : (
+              <Title order={1} p='40px 0 0 30px' c='white'>
+                ENHETLIG <br /> PROCESS
+              </Title>
+            )}
+          </Box>
         </Box>
         {/* DESIGN SECTION----------------------------------------------------------------------------- */}
         <Box sx={{ position: 'relative' }}>
