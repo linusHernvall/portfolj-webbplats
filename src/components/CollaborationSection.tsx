@@ -2,7 +2,6 @@ import { Title } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 
 function CollaborationSection() {
-  
   // Variabler / Functions ------------------------------------------------------
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -24,7 +23,6 @@ function CollaborationSection() {
     };
   }, []);
 
-  
   // CSS ------------------------------------------------------------------------
 
   const containerStyle: React.CSSProperties = {
@@ -74,7 +72,7 @@ function CollaborationSection() {
   return (
     <div style={containerStyle} className='collaboration-images'>
       <div className='container'>
-        <Title order={2} style={headingStyle}>
+        <Title sx={{ wordWrap: 'break-word' }} order={2} style={headingStyle}>
           SAMARBETSPARTNERS
         </Title>
         <div style={imageContainerStyle} className='image-container'>
