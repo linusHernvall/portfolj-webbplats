@@ -1,6 +1,7 @@
 import { Box, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import { coworkers } from '../data';
 
@@ -38,6 +39,10 @@ function Coworker() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>{coworker.fullName} - ELD'S IT</title>
+      </Helmet>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         {/* LEFT SECTION IMAGE DESKTOP ---------------------------------------------------------- */}
         <Box
