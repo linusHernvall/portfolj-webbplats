@@ -14,3 +14,9 @@
     margin-bottom: 20px; /* Adjust spacing between images */
   }
 }
+
+
+/* PADDING PÅ MANTINE ACCOIRDION I PROCESS SECTIONEN */
+.mantine-731ldn {
+  padding: 0;
+}
