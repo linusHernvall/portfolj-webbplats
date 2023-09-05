@@ -1,4 +1,4 @@
-import { Box, Text, Title } from '@mantine/core';
+import { Accordion, Box, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 
 function AboutSection() {
@@ -29,7 +29,7 @@ function AboutSection() {
             maxWidth: matches ? '70%' : '80%',
           }}
         >
-          <Text sx={{ fontSize: '12px', width: matches ? '50%' : '100%' }}>
+          <Text sx={{ fontSize: '18px', width: matches ? '50%' : '100%' }}>
             Vi är inte bara en webbyrå; vi är en samling av kreativa digitala tänkare och skapare
             som brinner för att omvandla visioner till digitala mästerverk. Vår resa började med en
             dröm om att inte bara designa och utveckla webbplatser, utan att skapa en helhetslösning
@@ -50,7 +50,7 @@ function AboutSection() {
             den ska förstärka det. Vi är inte nöjda förrän vi har transformerat din vision till en
             fulländad digital verklighet.
           </Text>
-          <Text sx={{ fontSize: '12px', width: matches ? '50%' : '100%' }}>
+          <Text sx={{ fontSize: '18px', width: matches ? '50%' : '100%' }}>
             Vi är engagerade i varje steg på vägen mot din onlineframgång, från första
             konsultationen till den färdiga produkten och vidare in i framtiden med löpande
             underhåll och uppdateringar. Vårt mål är att vara mer än en leverantör; vi vill vara en
@@ -73,6 +73,14 @@ function AboutSection() {
             framgångsrik verklighet. Med vårt team av skickliga utvecklare och designers är vi redo
             att ta din digitala närvaro till nästa nivå. Vi ser fram emot att starta denna spännande
             resa tillsammans med dig.
+            <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
+              <Accordion.Item value='customization'>
+                <Accordion.Control c='blue.9' p='0'>
+                  READ MORE
+                </Accordion.Control>
+                <Accordion.Panel p='0'>text</Accordion.Panel>
+              </Accordion.Item>
+            </Accordion>
           </Text>
         </Box>
       </Box>
