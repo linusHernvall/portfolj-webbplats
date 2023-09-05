@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import AboutSection from '../components/AboutSection';
 import CollaborationSection from '../components/CollaborationSection';
 import ContactSection from '../components/ContactSection';
@@ -43,6 +44,10 @@ function Home() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Hem - ELD'S IT</title>
+      </Helmet>
       <Subheader />
       <CollaborationSection />
       <div id='process'>
