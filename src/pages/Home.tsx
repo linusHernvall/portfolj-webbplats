@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import AboutSection from '../components/AboutSection';
 import CollaborationSection from '../components/CollaborationSection';
@@ -11,6 +11,7 @@ import Subheader from '../components/Subheader';
 import TechStack from '../components/TechStack';
 
 function Home() {
+  const [selectedLogo, setSelectedLogo] = useState<string>('volvo');
   // CSS ------------------------------------------------------------------------
 
   // Variabler / Functions ------------------------------------------------------
@@ -49,12 +50,12 @@ function Home() {
         <title>Hem - ELD'S IT</title>
       </Helmet>
       <Subheader />
-      <CollaborationSection />
+      <CollaborationSection setSelectedLogo={setSelectedLogo}/>
       <div id='process'>
         <ProcessSection />
       </div>
       <div id='project'>
-        <ProjectCarousel />
+        <ProjectCarousel selectedLogo={selectedLogo}/>
       </div>
       <div id='team'>
         <CoworkerSection />
