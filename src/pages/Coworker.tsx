@@ -1,13 +1,11 @@
 import { Box, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { coworkers } from '../data';
 
 function Coworker() {
   // CSS ------------------------------------------------------------------------
-
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,8 +21,19 @@ function Coworker() {
   };
 
   // Variabler / Functions ------------------------------------------------------
-  const { id } = useParams<{ id: string | undefined }>();
   const matches = useMediaQuery('(min-width: 48em)');
+  const { id } = useParams<{ id?: string }>();
+
+  useEffect(() => {
+    // Update the page title and metadata using Helmet
+    if (id !== undefined && id !== null) {
+      const parsedId = parseInt(id, 10);
+      const coworker = coworkers.find(c => c.id === parsedId);
+      if (coworker) {
+        document.title = `${coworker.fullName} - ELD'S IT`;
+      }
+    }
+  }, [id]);
 
   if (!id) {
     return <h4>Invalid ID</h4>;
@@ -39,10 +48,6 @@ function Coworker() {
   // TSX ------------------------------------------------------------------------
   return (
     <>
-      <Helmet>
-        <meta charSet='utf-8' />
-        <title>{coworker.fullName} - ELD'S IT</title>
-      </Helmet>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         {/* LEFT SECTION IMAGE DESKTOP ---------------------------------------------------------- */}
         <Box
@@ -114,20 +119,24 @@ function Coworker() {
 
             <Box m='1rem 0 1rem' sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <Box>
-              <a href={`tel:${coworker.phone}`}>
-                <img
-                  style={{ width: '40px', marginRight: '0.5rem' }}
-                  src='/phone.png'
-                  alt='Phone'
-                />
-                <span>{coworker.phone}</span>
+                <a href={`tel:${coworker.phone}`}>
+                  <img
+                    style={{ width: '40px', marginRight: '0.5rem' }}
+                    src='/phone.png'
+                    alt='Phone'
+                  />
+                  <span>{coworker.phone}</span>
                 </a>
               </Box>
               <Box>
-              <a href={`mailto:${coworker.email}`}>
-                <img style={{ width: '40px', marginRight: '.5rem' }} src='/email.png' alt='Mail' />
-                <span>{coworker.email}</span>
-              </a>
+                <a href={`mailto:${coworker.email}`}>
+                  <img
+                    style={{ width: '40px', marginRight: '.5rem' }}
+                    src='/email.png'
+                    alt='Mail'
+                  />
+                  <span>{coworker.email}</span>
+                </a>
               </Box>
             </Box>
 

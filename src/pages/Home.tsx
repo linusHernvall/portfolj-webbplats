@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import AboutSection from '../components/AboutSection';
 import CollaborationSection from '../components/CollaborationSection';
 import ContactSection from '../components/ContactSection';
@@ -15,9 +14,9 @@ function Home() {
 
   // Variabler / Functions ------------------------------------------------------
 
-  // TSX ------------------------------------------------------------------------
   // This effect runs when the component mounts
   useEffect(() => {
+    document.title = `Hem - ELD'S IT`;
     // Retrieve the hash from the URL
     const hash = window.location.hash.substring(1);
 
@@ -42,12 +41,9 @@ function Home() {
       }, estimatedTime);
     }
   }, []);
+  // TSX ------------------------------------------------------------------------
   return (
     <div>
-      <Helmet>
-        <meta charSet='utf-8' />
-        <title>Hem - ELD'S IT</title>
-      </Helmet>
       <Subheader />
       <CollaborationSection />
       <div id='process'>
