@@ -77,7 +77,7 @@ function CollaborationSection({ setSelectedLogo }: CollaborationSectionProps) {
   return (
     <div style={containerStyle} className='collaboration-images'>
       <div className='container'>
-        <Title order={2} style={headingStyle}>
+        <Title sx={{ wordWrap: 'break-word' }} order={2} style={headingStyle}>
           SAMARBETSPARTNERS
         </Title>
         <div style={imageContainerStyle} className='image-container'>
