@@ -145,15 +145,10 @@ function ProcessSection() {
                 målgruppens beteenden. Genom noggrann forskning och analys strävar vi efter att
                 skapa en användarupplevelse som inte bara är tilltalande visuellt, utan också
                 intuitiv och smidig att navigera.
-                <Accordion
-                  variant='filled'
-                  fz='18px'
-                  chevronPosition='left'
-                  defaultValue='closed'
-                >
+                <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
                   <Accordion.Item value='customization'>
                     <Accordion.Control c='blue.9' p='0'>
-                      READ MORE
+                      LÄS MER
                     </Accordion.Control>
                     <Accordion.Panel p='0'>
                       Vår kompetens sträcker sig över både design och utveckling. Vårt team av
@@ -210,15 +205,10 @@ function ProcessSection() {
               vi kan skapa en sömlös och sammanhängande användarupplevelse. Vi börjar med att förstå
               våra kunders behov och mål, och bygger sedan upp tekniska lösningar som stöder dessa
               mål på alla nivåer.
-              <Accordion
-                variant='filled'
-                fz='18px'
-                chevronPosition='left'
-                defaultValue='closed'
-              >
+              <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
                 <Accordion.Item value='customization'>
                   <Accordion.Control c='blue.9' p='0'>
-                    READ MORE
+                    LÄS MER
                   </Accordion.Control>
                   <Accordion.Panel>
                     Inom frontend-utveckling strävar vi efter att skapa användargränssnitt som inte
@@ -276,15 +266,10 @@ function ProcessSection() {
               att skapa buzz och generera intresse. Vi arbetar tillsammans med våra kunder för att
               utveckla en lanseringsstrategi som passar deras mål och målgrupp. Vår kompetens inom
               design och användarupplevelse spelar en avgörande roll i detta skede.
-              <Accordion
-                variant='filled'
-                fz='18px'
-                chevronPosition='left'
-                defaultValue='closed'
-              >
+              <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
                 <Accordion.Item value='customization'>
                   <Accordion.Control c='blue.9' p='0'>
-                    READ MORE
+                    LÄS MER
                   </Accordion.Control>
                   <Accordion.Panel>
                     Vi säkerställer att den färdigställda produkten inte bara är tekniskt stabil,
