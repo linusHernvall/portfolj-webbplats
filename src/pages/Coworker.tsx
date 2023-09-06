@@ -23,23 +23,17 @@ function Coworker() {
   // Variabler / Functions ------------------------------------------------------
   const matches = useMediaQuery('(min-width: 48em)');
   const { id } = useParams<{ id?: string }>();
+  const coworker = id && coworkers.find(c => c.id === parseInt(id));
 
   useEffect(() => {
-    // Update the page title and metadata using Helmet
-    if (id !== undefined && id !== null) {
-      const parsedId = parseInt(id, 10);
-      const coworker = coworkers.find(c => c.id === parsedId);
-      if (coworker) {
-        document.title = `${coworker.fullName} - ELD'S IT`;
-      }
+    if (coworker) {
+      document.title = `${coworker.fullName} - ELD'S IT`;
     }
-  }, [id]);
+  }, [coworker]);
 
   if (!id) {
     return <h4>Invalid ID</h4>;
   }
-
-  const coworker = coworkers.find(c => c.id === parseInt(id));
 
   if (!coworker) {
     return <h4>Coworker not found</h4>;
@@ -119,7 +113,10 @@ function Coworker() {
 
             <Box m='1rem 0 1rem' sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <Box>
-                <a href={`tel:${coworker.phone}`}>
+                <a
+                  style={{ textDecoration: 'none', color: 'black' }}
+                  href={`tel:${coworker.phone}`}
+                >
                   <img
                     style={{ width: '40px', marginRight: '0.5rem' }}
                     src='/phone.png'
@@ -129,7 +126,10 @@ function Coworker() {
                 </a>
               </Box>
               <Box>
-                <a href={`mailto:${coworker.email}`}>
+                <a
+                  style={{ textDecoration: 'none', color: 'black' }}
+                  href={`mailto:${coworker.email}`}
+                >
                   <img
                     style={{ width: '40px', marginRight: '.5rem' }}
                     src='/email.png'
