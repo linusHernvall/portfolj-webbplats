@@ -1,5 +1,4 @@
 import { Carousel } from '@mantine/carousel';
-import { Progress } from '@mantine/core';
 import jacyz from '/jacyz.jpg';
 import mcdonalds from '/mcdonalds.jpg';
 import volvo from '/volvo.jpg';
@@ -34,6 +33,7 @@ function ProjectCarousel({ selectedLogo }: ProjectCarouselProps) {
         draggable={false}
         withIndicators
         initialSlide={initialSlide}
+        loop={true} // Enable the loop to transition from last to first and vice versa
       >
         <Carousel.Slide>
           <img style={{ width: '100%', objectFit: 'scale-down' }} src={volvo} alt='Volvo' />
@@ -49,8 +49,6 @@ function ProjectCarousel({ selectedLogo }: ProjectCarouselProps) {
           />
         </Carousel.Slide>
       </Carousel>
-
-      <Progress />
     </>
   );
 }
