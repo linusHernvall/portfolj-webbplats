@@ -1,5 +1,4 @@
 import { Carousel } from '@mantine/carousel';
-import { Progress } from '@mantine/core';
 import jacyz from '/jacyz.jpg';
 import mcdonalds from '/mcdonalds.jpg';
 import volvo from '/volvo.jpg';
