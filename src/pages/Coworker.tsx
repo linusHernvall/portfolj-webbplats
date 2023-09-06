@@ -114,16 +114,20 @@ function Coworker() {
 
             <Box m='1rem 0 1rem' sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <Box>
+              <a href={`tel:${coworker.phone}`}>
                 <img
                   style={{ width: '40px', marginRight: '0.5rem' }}
                   src='/phone.png'
                   alt='Phone'
                 />
                 <span>{coworker.phone}</span>
+                </a>
               </Box>
               <Box>
+              <a href={`mailto:${coworker.email}`}>
                 <img style={{ width: '40px', marginRight: '.5rem' }} src='/email.png' alt='Mail' />
                 <span>{coworker.email}</span>
+              </a>
               </Box>
             </Box>
 

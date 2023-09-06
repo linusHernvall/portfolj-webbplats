@@ -1,4 +1,14 @@
-import { Box, Button, Col, Container, Grid, TextInput, Textarea, Title } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Col,
+  Container,
+  Grid,
+  TextInput,
+  Textarea,
+  Title,
+  Input,
+} from '@mantine/core';
 import React, { useState } from 'react';
 
 function ContactSection() {
@@ -35,38 +45,60 @@ function ContactSection() {
         <Grid gutter='lg'>
           <Col span={12}>
             <form onSubmit={handleFormSubmit}>
-              <TextInput
+              <Input.Wrapper
+                id='name-input'
+                withAsterisk
+                label='Namn'
                 required
-                label={name && !name.trim() && !emailSent ? 'Namn' : undefined}
-                value={name}
-                onChange={event => setName(event.currentTarget.value)}
-                placeholder='Namn'
-                style={{ marginBottom: '15px' }}
-              />
-              <TextInput
+                labelProps={{ style: { color: 'white' } }}
+                >
+                <TextInput
+                  value={name}
+                  onChange={event => setName(event.currentTarget.value)}
+                  placeholder='Ange ditt namn här'
+                  style={{ marginBottom: '15px' }}
+                />
+              </Input.Wrapper>
+
+              <Input.Wrapper
+                id='email-input'
+                withAsterisk
+                label='Email'
                 required
-                type='email'
-                label={email && !/\S+@\S+\.\S+/.test(email) && !emailSent ? 'Email' : undefined}
-                value={email}
-                onChange={event => setEmail(event.currentTarget.value)}
-                placeholder='Email'
-                style={{ marginBottom: '15px' }}
-              />
-              <Textarea
+                labelProps={{ style: { color: 'white' } }}
+
+              >
+                <TextInput
+                  type='email'
+                  value={email}
+                  onChange={event => setEmail(event.currentTarget.value)}
+                  placeholder='Uppge din email här'
+                  style={{ marginBottom: '15px' }}
+                />
+              </Input.Wrapper>
+
+              <Input.Wrapper
+                id='description-input'
+                withAsterisk
+                label='Beskrivning'
                 required
-                label={description && !description.trim() && !emailSent ? 'Description' : undefined}
-                value={description}
-                onChange={event => setDescription(event.currentTarget.value)}
-                placeholder='Beskriv ärendet...'
-                style={{ marginBottom: '15px' }}
-              />
+                labelProps={{ style: { color: 'white' } }}
+                >
+                <Textarea
+                  value={description}
+                  onChange={event => setDescription(event.currentTarget.value)}
+                  placeholder='Beskriv ärendet...'
+                  style={{ marginBottom: '15px' }}
+                />
+              </Input.Wrapper>
+
               <Button
                 type='submit'
                 variant='outline'
                 color={isSubmitting ? 'white' : undefined}
                 disabled={isSubmitting}
                 style={{
-                  backgroundColor: isSubmitting ? 'transparent' : 'white', // Set white background when not submitting
+                  backgroundColor: isSubmitting ? 'transparent' : 'white',
                   opacity: isSubmitting ? 0.6 : 1,
                   cursor: isSubmitting ? 'not-allowed' : 'pointer',
                   display: 'block',
