@@ -1,4 +1,4 @@
-import { Box, Text, Title, createStyles } from '@mantine/core';
+import { Accordion, Box, Text, Title, createStyles } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
@@ -134,7 +134,7 @@ function ProcessSection() {
               <Title order={2} p='20px 0' ta='center'>
                 Design
               </Title>
-              <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
+              <Text fz='18px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
                 Vår webbyrå, ELD'S IT, är något alldeles speciellt när det kommer till att designa
                 hemsidor från ett helhetsperspektiv. Vårt arbete handlar inte bara om att skapa
                 vackra sidor, utan om att skapa meningsfulla och funktionella digitala platser som
@@ -145,27 +145,34 @@ function ProcessSection() {
                 målgruppens beteenden. Genom noggrann forskning och analys strävar vi efter att
                 skapa en användarupplevelse som inte bara är tilltalande visuellt, utan också
                 intuitiv och smidig att navigera.
-                <br />
-                <br />
-                Vår kompetens sträcker sig över både design och utveckling. Vårt team av designers
-                och utvecklare samarbetar för att integrera den senaste tekniken och bästa
-                användbarhetspraxis. Detta ser till att våra hemsidor är moderna, responsiva och
-                anpassningsbara till olika enheter.
-                <br />
-                <br />
-                Men det som verkligen driver oss är möjligheten att göra skillnad för våra kunders
-                affärer. Vi ser bortom det rent visuella och arbetar hårt för att integrera
-                affärsstrategi i varje designbeslut. Vi tar hänsyn till varumärkesidentitet,
-                målgruppens förväntningar och de mål som våra kunder vill uppnå. På så sätt skapar
-                vi inte bara hemsidor, utan kraftfulla verktyg för att öka försäljning, skapa
-                medvetenhet och bygga starka kundrelationer.
-                <br />
-                <br />
-                Vårt holistiska synsätt innebär att vi kombinerar kreativ konstnärlighet med
-                affärsmässig strategi. Resultatet är hemsidor som inte bara är estetiskt
-                tilltalande, utan som också driver konkreta resultat för företagen vi samarbetar
-                med. Med ELD'S IT som partner kan du vara trygg med att din digitala närvaro är i de
-                bästa och mest kompetenta händerna.
+                <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
+                  <Accordion.Item value='customization'>
+                    <Accordion.Control c='blue.9' p='0'>
+                      LÄS MER
+                    </Accordion.Control>
+                    <Accordion.Panel p='0'>
+                      Vår kompetens sträcker sig över både design och utveckling. Vårt team av
+                      designers och utvecklare samarbetar för att integrera den senaste tekniken och
+                      bästa användbarhetspraxis. Detta ser till att våra hemsidor är moderna,
+                      responsiva och anpassningsbara till olika enheter.
+                      <br />
+                      <br />
+                      Men det som verkligen driver oss är möjligheten att göra skillnad för våra
+                      kunders affärer. Vi ser bortom det rent visuella och arbetar hårt för att
+                      integrera affärsstrategi i varje designbeslut. Vi tar hänsyn till
+                      varumärkesidentitet, målgruppens förväntningar och de mål som våra kunder vill
+                      uppnå. På så sätt skapar vi inte bara hemsidor, utan kraftfulla verktyg för
+                      att öka försäljning, skapa medvetenhet och bygga starka kundrelationer.
+                      <br />
+                      <br />
+                      Vårt holistiska synsätt innebär att vi kombinerar kreativ konstnärlighet med
+                      affärsmässig strategi. Resultatet är hemsidor som inte bara är estetiskt
+                      tilltalande, utan som också driver konkreta resultat för företagen vi
+                      samarbetar med. Med ELD'S IT som partner kan du vara trygg med att din
+                      digitala närvaro är i de bästa och mest kompetenta händerna.
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                </Accordion>
               </Text>
             </Box>
             <Box
@@ -186,7 +193,7 @@ function ProcessSection() {
             <Title order={2} p='20px 0' ta='center'>
               Utveckling
             </Title>
-            <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
+            <Text fz='18px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
               Vår webbyrå, ELD'S IT, är en kraft att räkna med när det gäller utveckling av hemsidor
               med ett omfattande helhetsperspektiv. Vår kompetens sträcker sig bortom gränserna
               mellan frontend och backend, vilket möjliggör skapandet av webbplatser som inte bara
@@ -198,28 +205,35 @@ function ProcessSection() {
               vi kan skapa en sömlös och sammanhängande användarupplevelse. Vi börjar med att förstå
               våra kunders behov och mål, och bygger sedan upp tekniska lösningar som stöder dessa
               mål på alla nivåer.
-              <br />
-              <br />
-              Inom frontend-utveckling strävar vi efter att skapa användargränssnitt som inte bara
-              är estetiskt tilltalande, utan också intuitiva och lätta att använda. Vårt arbete
-              innefattar skapandet av responsiva och interaktiva element som engagerar besökare och
-              skapar en positiv användarupplevelse. På backend-sidan har vi djup kunskap om
-              systemarkitektur, databasdesign och hantering av komplexa funktioner.
-              <br />
-              <br />
-              Vi bygger robusta och skalbara lösningar som säkerställer att hemsidan kan hantera
-              ökande trafik och användarinteraktion utan problem. Vår kompetens är inte bara
-              tekniskt inriktad, utan har också en affärsmässig komponent. Vi förstår att en
-              välutvecklad hemsida inte bara är en teknisk prestation, utan också ett verktyg för
-              att nå affärsmål. Därför arbetar vi nära våra kunder för att integrera deras strategi
-              och mål i utvecklingsprocessen.
-              <br />
-              <br />
-              Med ELD'S IT som partner kan du vara säker på att din hemsida inte bara kommer att
-              vara tekniskt robust och funktionell, utan också en kraftfull resurs för att uppnå
-              dina affärsmål. Vår helhetstäckande kompetens inom både frontend och
-              backend-utveckling gör oss till det självklara valet för företag som söker en pålitlig
-              och skicklig partner för sina digitala projekt.
+              <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
+                <Accordion.Item value='customization'>
+                  <Accordion.Control c='blue.9' p='0'>
+                    LÄS MER
+                  </Accordion.Control>
+                  <Accordion.Panel>
+                    Inom frontend-utveckling strävar vi efter att skapa användargränssnitt som inte
+                    bara är estetiskt tilltalande, utan också intuitiva och lätta att använda. Vårt
+                    arbete innefattar skapandet av responsiva och interaktiva element som engagerar
+                    besökare och skapar en positiv användarupplevelse. På backend-sidan har vi djup
+                    kunskap om systemarkitektur, databasdesign och hantering av komplexa funktioner.
+                    <br />
+                    <br />
+                    Vi bygger robusta och skalbara lösningar som säkerställer att hemsidan kan
+                    hantera ökande trafik och användarinteraktion utan problem. Vår kompetens är
+                    inte bara tekniskt inriktad, utan har också en affärsmässig komponent. Vi
+                    förstår att en välutvecklad hemsida inte bara är en teknisk prestation, utan
+                    också ett verktyg för att nå affärsmål. Därför arbetar vi nära våra kunder för
+                    att integrera deras strategi och mål i utvecklingsprocessen.
+                    <br />
+                    <br />
+                    Med ELD'S IT som partner kan du vara säker på att din hemsida inte bara kommer
+                    att vara tekniskt robust och funktionell, utan också en kraftfull resurs för att
+                    uppnå dina affärsmål. Vår helhetstäckande kompetens inom både frontend och
+                    backend-utveckling gör oss till det självklara valet för företag som söker en
+                    pålitlig och skicklig partner för sina digitala projekt.
+                  </Accordion.Panel>
+                </Accordion.Item>
+              </Accordion>
             </Text>
           </Box>
           <Box
@@ -240,7 +254,7 @@ function ProcessSection() {
             <Title order={2} p='20px 0' ta='center'>
               Lansering
             </Title>
-            <Text fz='12px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
+            <Text fz='18px' p={matches ? '0 10% 150px' : '0 10px 10px'}>
               När det kommer till att hjälpa våra kunder att lansera sina färdigställda produkter
               går ELD'S IT bortom utveckling och design. Vår fullständiga och engagerade support
               sträcker sig även till lanseringsfasen, där vi säkerställer att produkten når
@@ -252,28 +266,37 @@ function ProcessSection() {
               att skapa buzz och generera intresse. Vi arbetar tillsammans med våra kunder för att
               utveckla en lanseringsstrategi som passar deras mål och målgrupp. Vår kompetens inom
               design och användarupplevelse spelar en avgörande roll i detta skede.
-              <br />
-              <br />
-              Vi säkerställer att den färdigställda produkten inte bara är tekniskt stabil, utan
-              också estetiskt tilltalande och användarvänlig. Detta är särskilt viktigt vid
-              lanseringen, då det första intrycket kan göra en stor skillnad. Vi arbetar också med
-              att testa och optimera produkten innan den lanseras. Detta innefattar att säkerställa
-              att hemsidan fungerar korrekt på olika enheter och webbläsare samt att lasttesta den
-              för att hantera eventuella trafikspikar.
-              <br />
-              <br />
-              Genom att vara förberedda på olika scenarier vid lanseringen minimerar vi risken för
-              tekniska problem som kan påverka användarupplevelsen negativt. Vårt engagemang
-              sträcker sig också till att övervaka och analysera produktens prestanda efter
-              lanseringen. Vi använder olika verktyg och analyser för att utvärdera hur användare
-              interagerar med produkten och hur den påverkar affärsmålen. Om det behövs gör vi
-              justeringar för att optimera resultat och uppnå önskade mål.
-              <br />
-              <br />
-              ELD'S IT går långt bortom att bara leverera en färdig produkt. Vi är med våra kunder
-              hela vägen, och vårt mål är att säkerställa att varje lansering är en framgångsrik och
-              minnesvärd händelse. Med vår kompetens och engagemang är vi redo att hjälpa våra
-              kunder att ta steget från utveckling till framgångsrik lansering och bortom.
+              <Accordion variant='filled' fz='18px' chevronPosition='left' defaultValue='closed'>
+                <Accordion.Item value='customization'>
+                  <Accordion.Control c='blue.9' p='0'>
+                    LÄS MER
+                  </Accordion.Control>
+                  <Accordion.Panel>
+                    Vi säkerställer att den färdigställda produkten inte bara är tekniskt stabil,
+                    utan också estetiskt tilltalande och användarvänlig. Detta är särskilt viktigt
+                    vid lanseringen, då det första intrycket kan göra en stor skillnad. Vi arbetar
+                    också med att testa och optimera produkten innan den lanseras. Detta innefattar
+                    att säkerställa att hemsidan fungerar korrekt på olika enheter och webbläsare
+                    samt att lasttesta den för att hantera eventuella trafikspikar.
+                    <br />
+                    <br />
+                    Genom att vara förberedda på olika scenarier vid lanseringen minimerar vi risken
+                    för tekniska problem som kan påverka användarupplevelsen negativt. Vårt
+                    engagemang sträcker sig också till att övervaka och analysera produktens
+                    prestanda efter lanseringen. Vi använder olika verktyg och analyser för att
+                    utvärdera hur användare interagerar med produkten och hur den påverkar
+                    affärsmålen. Om det behövs gör vi justeringar för att optimera resultat och
+                    uppnå önskade mål.
+                    <br />
+                    <br />
+                    ELD'S IT går långt bortom att bara leverera en färdig produkt. Vi är med våra
+                    kunder hela vägen, och vårt mål är att säkerställa att varje lansering är en
+                    framgångsrik och minnesvärd händelse. Med vår kompetens och engagemang är vi
+                    redo att hjälpa våra kunder att ta steget från utveckling till framgångsrik
+                    lansering och bortom.
+                  </Accordion.Panel>
+                </Accordion.Item>
+              </Accordion>
             </Text>
           </Box>
           <Box
