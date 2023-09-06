@@ -1,7 +1,11 @@
 import { Title } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 
-function CollaborationSection() {
+interface CollaborationSectionProps {
+  setSelectedLogo: React.Dispatch<React.SetStateAction<string>>;
+}
+
+function CollaborationSection({ setSelectedLogo }: CollaborationSectionProps) {
   // Variabler / Functions ------------------------------------------------------
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -68,6 +72,7 @@ function CollaborationSection() {
     width: '100%',
     height: '100%',
   };
+
   // TSX ------------------------------------------------------------------------
   return (
     <div style={containerStyle} className='collaboration-images'>
@@ -81,6 +86,7 @@ function CollaborationSection() {
             onClick={e => {
               e.preventDefault();
               scrollToSection('project');
+              setSelectedLogo('jacyz'); 
             }}
           >
             <div style={jacyzBoxStyle} className='image-box'>
@@ -92,6 +98,7 @@ function CollaborationSection() {
             onClick={e => {
               e.preventDefault();
               scrollToSection('project');
+              setSelectedLogo('mcdonalds'); 
             }}
           >
             <div style={imageBoxStyle} className='image-box'>
@@ -103,6 +110,7 @@ function CollaborationSection() {
             onClick={e => {
               e.preventDefault();
               scrollToSection('project');
+              setSelectedLogo('volvo'); 
             }}
           >
             <div style={imageBoxStyle} className='image-box'>
