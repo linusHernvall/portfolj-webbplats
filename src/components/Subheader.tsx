@@ -12,7 +12,7 @@ function Subheader() {
   return (
     <>
       <Box
-        h={'80vh'}
+        h={'90vh'}
         sx={{
           backgroundImage: 'url("/subheader.jpeg")',
           backgroundRepeat: 'no-repeat',
