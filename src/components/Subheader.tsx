@@ -12,7 +12,7 @@ function Subheader() {
   return (
     <>
       <Box
-        h={'60vh'}
+        h={'90vh'}
         sx={{
           backgroundImage: 'url("/subheader.jpeg")',
           backgroundRepeat: 'no-repeat',
@@ -24,7 +24,7 @@ function Subheader() {
           <Title
             sx={{ textShadow: 'black 4px 4px 6px' }}
             fz='96px'
-            pt='25vh'
+            pt='35vh'
             pr='50px'
             ta='right'
             c='white'
@@ -35,7 +35,7 @@ function Subheader() {
           <Title
             sx={{ textShadow: 'black 3px 3px 5px' }}
             fz='48px'
-            pt='25vh'
+            pt='42vh'
             pr='5px'
             ta='right'
             c='white'
