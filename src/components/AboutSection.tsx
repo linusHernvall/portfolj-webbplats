@@ -5,7 +5,7 @@ function AboutSection() {
   // CSS ------------------------------------------------------------------------
 
   // Variabler / Functions ------------------------------------------------------
-  const matches = useMediaQuery('(min-width: 48em)');
+  const matches = useMediaQuery('(min-width: 928px)');
 
   // TSX ------------------------------------------------------------------------
   return (
