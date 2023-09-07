@@ -5,7 +5,7 @@ function AboutSection() {
   // CSS ------------------------------------------------------------------------
 
   // Variabler / Functions ------------------------------------------------------
-  const matches = useMediaQuery('(min-width: 48em)');
+  const matches = useMediaQuery('(min-width: 928px)');
 
   // TSX ------------------------------------------------------------------------
   return (
@@ -27,7 +27,7 @@ function AboutSection() {
             justifyContent: 'center',
           }}
         >
-          <Text sx={{ fontSize: '18px', width: matches ? '80%' : '95%' }}>
+          <Text sx={{ fontSize: '18px', width: matches ? '928px' : '95%' }}>
             Vi är inte bara en webbyrå; vi är en samling av kreativa digitala tänkare och skapare
             som brinner för att omvandla visioner till digitala mästerverk. Vår resa började med en
             dröm om att inte bara designa och utveckla webbplatser, utan att skapa en helhetslösning
