@@ -1,27 +1,26 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# <span style="color:dodgerblue">Web Bureau</span>
 
-Currently, two official plugins are available:
+## <span style="color:#FF10F0"> Description </span>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+The purpose of this work was to carry out a project using agile methods - more specifically SCRUM. 
+The task was to build a fictional web agency that showcases the group participants' skills and experiences for potential consulting assignments.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Link to Netlify: [here](https://celebrated-parfait-debdfe.netlify.app/) 
 
-- Configure the top-level `parserOptions` property like this:
+## <span style="color:#FF10F0"> Setup Project </span>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Use these scripts to get started:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- `npm install` - Installs all necessary modules (run once).
+- `npm run dev` - Starting development environment.
+
+## <span style="color:#FF10F0"> Participants </span>
+
+Emil Helgesson [GitHub](https://github.com/Emil-Helge) <br>
+Simon Bengtsson [GitHub](https://github.com/Sillen00)<br>
+Daniel Vanpalo [GitHub](https://github.com/Knightrider85)<br>
+Linus Hernvall [GitHub](https://github.com/linusHernvall)<br>
+Lucas Alfredsson [GitHub](https://github.com/lauax)
+---
